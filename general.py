@@ -2,6 +2,7 @@ import constants
 import re
 
 def get_crystal_classes(crystal_name:str) -> list:
+    # Return a list of classes based on an input crystal name.
     return_list = []
     crystal_list = []
     
@@ -17,10 +18,10 @@ def get_crystal_classes(crystal_name:str) -> list:
         if crystal_name == constants.CLASS_CODE_LOOKUP[key]['crystal']:
             return_list.append(constants.CLASS_CODE_LOOKUP[key]['code'])
 
-
     return return_list
 
 def get_codes_from_selection(selection_list:list) -> list:
+    # Get a list of class codes based on pretty name selection.
     return_list = []
     for item in selection_list:
         if 'UNKNOWN' in item:
@@ -31,6 +32,7 @@ def get_codes_from_selection(selection_list:list) -> list:
     return return_list
 
 def format_class_list_as_str(class_list:list, seperator:str='|'):
+    # A function for turning a list of classes back into a pretty string.
     return_val = ''
 
     for item in class_list:
@@ -43,6 +45,7 @@ def format_class_list_as_str(class_list:list, seperator:str='|'):
     return return_val
 
 def class_match_sections(section_parts:list, class_list:list=None, return_as_list:bool=False, debug:bool=False):
+    # Takes a list of sections and searches for classes. If it is a class-based line, it will return if it matches.
     new_list = []
     if debug:
         new_list = section_parts

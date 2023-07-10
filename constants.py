@@ -58,7 +58,9 @@ PAGE_ICONS = [
     # '📜',
 ]
 
-ABOUT_TEXT = '''## About
+ABOUT_TEXT = '''
+A [Four Job Fiesta](https://www.fourjobfiesta.com/) hint generator.
+
 This is a shameless ripoff of the original [Enkibot Prime](https://enkibot-prime.herokuapp.com/) 
 which has been made using Python and Streamlit. All data was ripped from the original app and 
 all credit goes to the original creators.
