@@ -1,4 +1,5 @@
-import re, pandas as pd
+import re, json
+import pandas as pd
 import constants
 
 def load_db_file(db_file_name:str=constants.HINT_DB_FILE_NAME):
@@ -28,7 +29,8 @@ def parse_raw(text_body:str):
         # output_dict[idx]['section_parts'] = []
 
         section_dict['section_name'] = section_parts.pop(0)
-        section_dict['section_parts'] = []
+        output_sections = []
+        # section_dict['section_parts'] = []
         
         for part in section_parts:
             # Remove any extraneous white space
@@ -38,7 +40,9 @@ def parse_raw(text_body:str):
             part = re.sub('^\\* ', '', part)
             if part != '':
                 # output_dict[idx]['section_parts'].append(part)
-                section_dict['section_parts'].append(part)
+                output_sections.append(part)
+
+        section_dict['section_parts'] = json.dumps(output_sections)
 
         output_dict.append(section_dict)
 

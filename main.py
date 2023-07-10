@@ -2,28 +2,36 @@ import constants, general as gen, parse_hint_db as ph
 import streamlit as st
 import random as rd
 import pandas as pd
-import os
+import os, json
 
 @st.cache_data
 def get_raw_data():
+    # The dataframe is cached to improve performance.
     return pd.DataFrame(ph.easy_df_parse())
 
-def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False):
+def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False):
     section_dict = section_data[1]
-    with st.expander(section_dict['section_name'], expanded=expanded_setting):
-        st.markdown(gen.class_match_sections(section_dict['section_parts'], class_codes_list, debug=debug))
+    new_section_list = json.loads(section_dict['section_parts'])
+
+    md_body = gen.class_match_sections(new_section_list, class_codes_list, debug=debug)
+
+    if simplified_display:
+        md_body = '## ' + section_dict['section_name'] + '\n\n' + md_body
+        st.markdown(md_body)
+    else:
+        with st.expander(section_dict['section_name'], expanded=expanded_setting):
+            st.markdown(md_body)
 
     return
 
 def go():
-    header_col1, header_col2 = st.columns([9,1])
+    header_col1, header_col2 = st.columns(2)
     with header_col1:
         st.title('Enkibot Prime ST')
 
     with header_col2:
         st.image(os.path.join('images', 'enkidu.png'), width=60)
 
-    # header_col1, header_col2 = st.columns([8, 1])
     with st.sidebar:
         st.image(os.path.join('images', 'FFV_logo.png'))
         st.markdown('## Class Selection and Options')
@@ -53,7 +61,16 @@ def go():
             help='Search database for key terms or values'
         )
 
-        st.markdown(constants.ABOUT_TEXT)
+        with st.expander('About', expanded=True):
+            st.markdown(constants.ABOUT_TEXT)
+
+        with st.expander('Additional Options', expanded=False):
+            # debug = st.checkbox('Debug', value=False, help='Enable debug levels of output')
+
+            if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
+                st.cache_data.clear()
+
+            show_original_md = st.checkbox('Show Original Markdown', value=False, help='Show the original markdown data instead of the expanders.')
 
         
 
@@ -72,7 +89,7 @@ def go():
 
     # st.json(hint_data)
     for section_row in hint_data.iterrows():
-        format_section(section_row, class_codes, expanded, debug)
+        format_section(section_row, class_codes, expanded, debug, show_original_md)
         pass
 
     return 
