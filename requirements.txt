@@ -1,2 +1,5 @@
 # The python package and local web server
 streamlit
+
+# pandas is required for dataframe manipulation
+pandas
