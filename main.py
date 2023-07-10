@@ -95,5 +95,8 @@ if __name__ == '__main__':
         page_title='Enkibot Prime ST',
         page_icon=random.choice(constants.PAGE_ICONS),
         layout='wide',
+        menu_items={
+            "About": '''Check out the [Github Repo](https://github.com/jnschurig/enkibot-prime-st).'''
+        }
     )
     go()
