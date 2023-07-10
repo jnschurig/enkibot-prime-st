@@ -1,8 +1,7 @@
 import constants, general as gen, parse_hint_db as ph
 import streamlit as st
-import random as rd
 import pandas as pd
-import os, json
+import os, json, random
 
 @st.cache_data
 def get_raw_data():
@@ -10,6 +9,7 @@ def get_raw_data():
     return pd.DataFrame(ph.easy_df_parse())
 
 def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False):
+    # Function to draw the section data.
     section_dict = section_data[1]
     new_section_list = json.loads(section_dict['section_parts'])
 
@@ -65,39 +65,35 @@ def go():
             st.markdown(constants.ABOUT_TEXT)
 
         with st.expander('Additional Options', expanded=False):
-            # debug = st.checkbox('Debug', value=False, help='Enable debug levels of output')
+            # An optional checkbox to set debug functionality for the app.
+            # debug_functionality = st.checkbox('Enable Debug Functionality', value=False, help='Enable debug levels of output')
 
+            # Reload the hint database
             if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
                 st.cache_data.clear()
 
             show_original_md = st.checkbox('Show Original Markdown', value=False, help='Show the original markdown data instead of the expanders.')
 
-        
-
-    # st.write('RAW SELECTION')
-    # st.json(class_selection)
-
+    # Get the codes (KNT, MNK, etc)
     class_codes = gen.get_codes_from_selection(class_selection)
 
-    # st.json(class_codes)
+    # Added another functional layer so as to include caching.
     hint_data = get_raw_data()
+
+    # If a search value is set, filter the entire database on the search result.
     if search_value:
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
-    # st.table(hint_data)
-
-
-    # st.json(hint_data)
+    # Draw the sections
     for section_row in hint_data.iterrows():
         format_section(section_row, class_codes, expanded, debug, show_original_md)
-        pass
 
     return 
 
 if __name__ == '__main__':
     st.set_page_config(
         page_title='Enkibot Prime ST',
-        page_icon=rd.choice(constants.PAGE_ICONS),
+        page_icon=random.choice(constants.PAGE_ICONS),
         layout='wide',
     )
     go()

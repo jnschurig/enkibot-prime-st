@@ -3,6 +3,7 @@ import pandas as pd
 import constants
 
 def load_db_file(db_file_name:str=constants.HINT_DB_FILE_NAME):
+    # Simple function to load the db file as text
     try:
         with open(db_file_name, 'r') as f:
             return f.read()
@@ -10,27 +11,20 @@ def load_db_file(db_file_name:str=constants.HINT_DB_FILE_NAME):
         return ''
 
 def parse_raw(text_body:str):
-    # print(text_body[:100])
+    # Parse the raw text into a list of sections, each with a section title.
     main_sections = text_body.split('## ')
-    # print(main_sections[1])
 
     # First section is empty, so get rid of it.
     main_sections.pop(0)
 
-    # output_dict = {}
     output_dict = []
 
     for idx, section in enumerate(main_sections):
         section_dict = {}
-        # section_parts = section.split('\\n')
         section_parts = section.splitlines()
-        # output_dict[idx] = {}
-        # output_dict[idx]['section_name'] = section_parts.pop(0)
-        # output_dict[idx]['section_parts'] = []
 
         section_dict['section_name'] = section_parts.pop(0)
         output_sections = []
-        # section_dict['section_parts'] = []
         
         for part in section_parts:
             # Remove any extraneous white space
@@ -39,7 +33,6 @@ def parse_raw(text_body:str):
             # Remove leading *s
             part = re.sub('^\\* ', '', part)
             if part != '':
-                # output_dict[idx]['section_parts'].append(part)
                 output_sections.append(part)
 
         section_dict['section_parts'] = json.dumps(output_sections)
@@ -49,16 +42,13 @@ def parse_raw(text_body:str):
     return output_dict
 
 def easy_parse():
+    # A quick combination of loading and parsing.
     raw_text = load_db_file()
     return parse_raw(raw_text)
 
 def easy_df_parse():
-    df = pd.DataFrame(easy_parse())
-
-    # data_dict = easy_parse()
-    
-    return df
-
+    # Another quick combination to convert the resultant list into a dataframe.
+    return pd.DataFrame(easy_parse())
 
 if __name__ == '__main__':
     import json 
