@@ -40,7 +40,7 @@ def format_class_list_as_str(class_list:list, seperator:str='|'):
 
     return_val = return_val[1:]
 
-    return_val = '[' + return_val + '}'
+    return_val = '[' + return_val + ']'
 
     return return_val
 
