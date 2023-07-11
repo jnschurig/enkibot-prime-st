@@ -15,14 +15,16 @@ def format_section(section_data, class_codes_list:list=None, expanded_setting:bo
 
     md_body = gen.class_match_sections(new_section_list, class_codes_list, debug=debug)
 
-    if simplified_display:
-        md_body = '## ' + section_dict['section_name'] + '\n\n' + md_body
-        st.markdown(md_body)
-    else:
+    if not simplified_display:
         with st.expander(section_dict['section_name'], expanded=expanded_setting):
             st.markdown(md_body)
 
-    return
+    # Restore the body header sections...
+    md_body = '## ' + section_dict['section_name'] + '\n\n' + md_body
+    if simplified_display:
+        st.markdown(md_body)
+
+    return md_body
 
 def go():
     header_col1, header_col2 = st.columns(2)
@@ -30,7 +32,7 @@ def go():
         st.title('Enkibot Prime ST')
 
     with header_col2:
-        st.image(os.path.join('images', 'enkidu.png'), width=60)
+        st.image(os.path.join('images', 'enkidu.png'), width=50)
 
     with st.sidebar:
         st.image(os.path.join('images', 'FFV_logo.png'))
@@ -61,6 +63,8 @@ def go():
             help='Search database for key terms or values'
         )
 
+        st.divider()
+
         with st.expander('About', expanded=True):
             st.markdown(constants.ABOUT_TEXT)
 
@@ -72,7 +76,7 @@ def go():
             if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
                 st.cache_data.clear()
 
-            show_original_md = st.checkbox('Show Original Markdown', value=False, help='Show the original markdown data instead of the expanders.')
+            show_original_md = st.checkbox('Simplified Display', value=False, help='Show the original markdown data instead of the expanders.')
 
     # Get the codes (KNT, MNK, etc)
     class_codes = gen.get_codes_from_selection(class_selection)
@@ -84,9 +88,29 @@ def go():
     if search_value:
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
-    # Draw the sections
-    for section_row in hint_data.iterrows():
-        format_section(section_row, class_codes, expanded, debug, show_original_md)
+    enki_main_tab, enki_sub_tab1, enki_sub_tab2 = st.tabs(['Enkibot', 'Raw Output', 'Changelog'])
+    with enki_main_tab:
+        # Draw the sections
+        full_body = ''
+        for section_row in hint_data.iterrows():
+            full_body += format_section(section_row, class_codes, expanded, debug, show_original_md) + '\n'
+
+    with enki_sub_tab1:
+        file_classes = gen.format_class_list_as_str(class_codes, '_')
+        st.download_button(
+            'Export to File', 
+            data=full_body, 
+            file_name=f'enkibot_hints_{file_classes}.md', 
+            help='Download raw text to file.'
+        )
+        st.code(full_body, language='markdown')
+
+    with enki_sub_tab2:
+        st.markdown('## Changelog')
+
+        with open('changelog.md', 'r') as f:
+            changelog_text = f.read()
+        st.markdown(changelog_text)
 
     return 
 
@@ -96,7 +120,9 @@ if __name__ == '__main__':
         page_icon=random.choice(constants.PAGE_ICONS),
         layout='wide',
         menu_items={
-            "About": '''Check out the [Github Repo](https://github.com/jnschurig/enkibot-prime-st).'''
+            "About": '''Check out the [Github Repo](https://github.com/jnschurig/enkibot-prime-st). 
+            For issues, help, bugs, etc you can raise an issue on Github, [send me an email](mailto:jnschurig@gmail.com), 
+            or come to the Discord mentioned in the intro text.''',
         }
     )
     go()

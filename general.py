@@ -31,7 +31,7 @@ def get_codes_from_selection(selection_list:list) -> list:
 
     return return_list
 
-def format_class_list_as_str(class_list:list, seperator:str='|'):
+def format_class_list_as_str(class_list:list, seperator:str='|', encase_characters:str=None):
     # A function for turning a list of classes back into a pretty string.
     return_val = ''
 
@@ -40,7 +40,11 @@ def format_class_list_as_str(class_list:list, seperator:str='|'):
 
     return_val = return_val[1:]
 
-    return_val = '[' + return_val + ']'
+    if encase_characters is not None:
+        open_char = encase_characters[:1]
+        close_char = encase_characters[1:2]
+        return_val = f'{open_char}{return_val}{close_char}'
+        # return_val = '[' + return_val + ']'
 
     return return_val
 
@@ -61,12 +65,12 @@ def class_match_sections(section_parts:list, class_list:list=None, return_as_lis
                 if '+' in full_class_spec:
                     if len(overlapping_classes) == len(class_spec_list):
                         # This is a full "and" situation
-                        replacement_class_list = format_class_list_as_str(overlapping_classes, '+')
+                        replacement_class_list = format_class_list_as_str(overlapping_classes, '+', encase_characters='[]')
                         section = section.replace(full_class_spec, replacement_class_list + ' ')
                         new_list.append(section)
                 elif len(overlapping_classes) > 0:
                     # This is the "or" situation
-                    replacement_class_list = format_class_list_as_str(overlapping_classes)
+                    replacement_class_list = format_class_list_as_str(overlapping_classes, encase_characters='[]')
                     section = section.replace(full_class_spec, replacement_class_list + ' ')
                     new_list.append(section)
 
