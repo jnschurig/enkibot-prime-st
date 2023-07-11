@@ -1,3 +1,7 @@
+#### 0.2.1 2023-07-11
+
+- Fixed a minor issue with filenames when no jobs/classes are selected.
+
 #### 0.2.0 2023-07-11
 
 - Implemented versioning and changelog.

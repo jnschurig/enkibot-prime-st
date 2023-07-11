@@ -96,7 +96,13 @@ def go():
             full_body += format_section(section_row, class_codes, expanded, debug, show_original_md) + '\n'
 
     with enki_sub_tab1:
-        file_classes = gen.format_class_list_as_str(class_codes, '_')
+        if len(class_codes) > 0:
+            file_classes = gen.format_class_list_as_str(class_codes, '_')
+        elif debug:
+            file_classes = 'all'
+        else:
+            file_classes = 'no_classes'
+
         st.download_button(
             'Export to File', 
             data=full_body, 
