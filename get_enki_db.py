@@ -7,14 +7,13 @@ def go():
 
     print(url)
 
-    response = requests.get(url)
+    response = requests.post(url)
 
-    # if response.status_code
-    print(response.status_code)
+    if response.status_code == 200:
+        print('herokuapp ok. returning text...')
+        return response.text
 
-    print(response.text)
-
-    return ''
+    return None
 
 if __name__ == '__main__':
     go()

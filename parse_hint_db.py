@@ -1,6 +1,6 @@
 import re, json
 import pandas as pd
-import constants
+import constants, get_enki_db
 
 def load_db_file(db_file_name:str=constants.HINT_DB_FILE_NAME):
     # Simple function to load the db file as text
@@ -43,6 +43,13 @@ def parse_raw(text_body:str):
 
 def easy_parse():
     # A quick combination of loading and parsing.
+
+    # Attempt to get fresh data from the main enkibot website.
+    enki_result = get_enki_db.go()
+    if enki_result is not None:
+        return parse_raw(enki_result)
+    
+    # We have a local copy we can serve up if need be.
     raw_text = load_db_file()
     return parse_raw(raw_text)
 

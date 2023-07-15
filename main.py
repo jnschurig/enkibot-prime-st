@@ -81,8 +81,9 @@ def go():
     # Get the codes (KNT, MNK, etc)
     class_codes = gen.get_codes_from_selection(class_selection)
 
-    # Added another functional layer so as to include caching.
-    hint_data = get_raw_data()
+    with st.spinner('Fetching Data...'):
+        # Added another functional layer so as to include caching.
+        hint_data = get_raw_data()
 
     # If a search value is set, filter the entire database on the search result.
     if search_value:
