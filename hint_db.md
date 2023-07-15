@@ -787,9 +787,12 @@
 
 ## Surgate
 * You can visit Surgate Castle at this point, but most parties shouldn't bother.
+* If you need shop-buyable equipment, it has the next tier up above Quelb. Great Swords beyond the one in the moat, for instance.
 * [BRD] Bards, however, can learn the incredible Swift Song from a book in King Xezat's bedroom.
 * [TIM] Time Mages can find the Float spell at Surgate, just in time for Exdeath.
 * [TIM] Help the librarian reshelve the books, then follow them back and ultimately open a chest for Float.
+* [BER] Surgate has the first axe with more attack power than the Death Sickle. Also it doesn't have procs so you can use it to farm Reflect Rings.
+* [SAM] You can buy a better katana here. Nothing to write home about, but more attack power.
 * [DRG] The Surgate weapon shop has Heavy Lances, for when the elemental lances you already have don't work.
 * [CHM] This is also your earliest opportunity to farm Turtle Shells again in W2.
 * [CHM] The best spot is south of Moore, on a small strip of land immediately south of the mountains.
@@ -812,18 +815,20 @@
 
 ## Barrier Tower
 * Anyone with a caster should make sure to get the Gold Hairpin in a trapped chest on the left side of Floor 9, which halves MP consumption.
-* [BLU] Blue Mages can learn Time Slip from Travelers, though it's of somewhat limited utility since it requires targets to be vulnerable to both Sleep and Old.
+* [BLU] Blue Mages can learn Time Slip from Travelers, though it's of somewhat limited utility since it requires targets to be vulnerable to both Sleep and Old... unless you're on Pixel, in which case it works just fine to only inflict one.
 * [BLU] Level Trickers can cast Level 4 Graviga here, if you missed it from Ronka. But also, it's basically useless, so whatever.
 * [THF] Thieves can rare steal Flame Rings from the Red Dragons in the Gold Hairpin and Blood Sword chests.
 * [THF] Remember, you can flee from a monster-in-a-box to reset the encounter if your steal fails.
 * [THF] ...or if you're crazy and want 4 of them, or even more to sell for gil, all while grinding out escapes for the Chicken Knife.
 * Almost every party should farm Reflect Knights for their Reflect Ring drops here. You'll likely need them for World 2 Exdeath.
 * The best place to farm them is outside between floors 5 and 6, but if you need to return to the sub to heal frequently the balcony between 3 and 4 is pretty good too.
+* [WHM] You have access to the spell Reflect. You can skip Reflect Rings if you want. I would probably get one to make your life easier against Catastrophe, but there's no mandatory reason to.
 * [BLU] You have L2 Old -> L5 Death to kill W2 Exdeath, and can safely skip Reflect Rings altogether. Maybe get one for Catastrophe.
+* [SUM] You can pick up Carbuncle in the Meatfort, so you don't need Reflect Rings if you're feeling dangerous. That said, you might want one to make Catastrophe even more trivial.
 * [BST] You have !Release to kill W2 Exdeath, and can safely skip Reflect Rings altogether. Maybe get one for Catastrophe.
 * [CHM] Since you have Chemist, you don't need Reflect Rings for W2 Exdeath, though they're still nice. Be sure to get one if you're going to go toe-to-toe with Omega via !Mix.
 * [BLM] Drain bypasses Reflect, so you can farm your first Reflect Ring with Drain and then bounce Breaks off your own party for the rest.
-* [THF] No point in Thieves farming Reflect Rings here. You can steal them from Carbuncle and Reflect Mages more easily before you need them.
+* [THF] No point in Thieves farming Reflect Rings here. You can steal one from Carbuncle and three more from Reflect Mages more easily before you need them.
 * [MYS] You can kill Reflect Knights with Break Blade. Reflect Rings are easy for you!
 * [TIM] You can kill Reflect Knights with Comet. Reflect Rings are not very difficult for you!
 
@@ -948,7 +953,7 @@
 * If you are bringing Reflect Rings, going in with a level divisible by 3 is actively good!
 * Parties with weak healing options (or anyone, honestly) should consider reading Exdeath's AI script to be ready for Zombie Breath, which wipe a party at low HP.
 * [WHM] Make sure you keep Protect up; Exdeath's Vacuum Wave physicals are nasty.
-* [WHM] Remember that you can't actually heal party members with a Reflect Ring, unless you have a way to also put Reflect on Exdeath.
+* [WHM] Remember that you can't actually heal party members with a Reflect Ring, unless you have a way to also put Reflect on Exdeath. Thankfully, you have Reflect from Moore. So just cast it on Exdeath if you need.
 * [WHM] Setting Berserk on your own physical characters can help with the mad rush to take his last 7000 HP.
 * [BLU] Level 2 Old works. If you know the timing well (once it lands, get six Can't Run messages), you can cast Level 5 Death at the right time to end the fight.
 * [BLU] That said, you may also want to consider stalling the first form long enough to learn Level 3 Flare. I personally don't but if you want to, that's cool too.

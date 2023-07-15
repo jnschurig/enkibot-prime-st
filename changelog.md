@@ -1,3 +1,9 @@
+#### 0.2.2 2023-07-14
+
+- Fixed the data fetch so it will grab a copy from `https://enkibot-prime.herokuapp.com/debug/`.
+- It will cache the result for minimal hits to the website.
+- In the event a non-200 http result, it will use a local copy of the data.
+
 #### 0.2.1 2023-07-11
 
 - Fixed a minor issue with filenames when no jobs/classes are selected.
