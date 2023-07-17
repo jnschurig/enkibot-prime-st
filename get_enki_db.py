@@ -2,10 +2,10 @@ import requests
 import constants
 
 def go():
-
+    # Fetch data from original enkibot app.
+    # Someday perhaps I will have it fetch the data from the git source...
+    
     url = constants.ENKI_DATA_URL
-
-    print(url)
 
     response = requests.post(url)
 

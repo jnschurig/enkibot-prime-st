@@ -1,5 +1,6 @@
 import constants
 import re
+import streamlit as st
 
 def get_crystal_classes(crystal_name:str) -> list:
     # Return a list of classes based on an input crystal name.
@@ -85,6 +86,12 @@ def class_match_sections(section_parts:list, class_list:list=None, return_as_lis
         return_string += '* ' + section + '\n'
 
     return return_string
+
+def reset_session():
+    for key in st.session_state.keys():
+        del st.session_state[key]
+
+    return
 
 if __name__ == '__main__':
     print(get_crystal_classes('UNKNOWN WIND'))
