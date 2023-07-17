@@ -1,3 +1,10 @@
+#### 0.3.0 2023-07-16
+
+- Added Mix section in the sidebar. Select `Chemist` from the selector to enable it.
+- Added experimental `Reset Session` button to `Additional Options` expander. 
+- Changed default expander behavior. Previous: open. Current: closed.
+- Numerous tiny tweaks.
+
 #### 0.2.2 2023-07-14
 
 - Fixed the data fetch so it will grab a copy from `https://enkibot-prime.herokuapp.com/debug/`.

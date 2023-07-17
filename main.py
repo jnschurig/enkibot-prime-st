@@ -10,23 +10,26 @@ def get_raw_data():
 
 def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False):
     # Function to draw the section data.
-    section_dict = section_data[1]
-    new_section_list = json.loads(section_dict['section_parts'])
+    # section_dict = section_data[1]
+    new_section_list = json.loads(section_data['section_parts'])
 
     md_body = gen.class_match_sections(new_section_list, class_codes_list, debug=debug)
 
     if not simplified_display:
-        with st.expander(section_dict['section_name'], expanded=expanded_setting):
+        with st.expander(section_data['section_name'], expanded=expanded_setting):
             st.markdown(md_body)
 
     # Restore the body header sections...
-    md_body = '## ' + section_dict['section_name'] + '\n\n' + md_body
+    md_body = '## ' + section_data['section_name'] + '\n\n' + md_body
     if simplified_display:
         st.markdown(md_body)
 
     return md_body
 
 def go():
+    #---------------#
+    # Title Section #
+    #---------------#
     header_col1, header_col2 = st.columns(2)
     with header_col1:
         st.title('Enkibot Prime ST')
@@ -34,17 +37,19 @@ def go():
     with header_col2:
         st.image(os.path.join('images', 'enkidu.png'), width=50)
 
+    #---------#
+    # Sidebar #
+    #---------#
     with st.sidebar:
         st.image(os.path.join('images', 'FFV_logo.png'))
         st.markdown('## Class Selection and Options')
         selection_container = st.container()
 
-        # with header_col2:
         box_col1, box_col2 = st.columns(2)
         with box_col1:
             debug = st.checkbox('Debug', value=False, help='See debug data for all classes')
         with box_col2:
-            expanded = st.checkbox('Expand All', value=True, help='Auto expand/collapse all sections')
+            expanded = st.checkbox('Expand All', value=False, help='Auto expand/collapse all sections')
 
         with selection_container:
             class_selection = st.multiselect(
@@ -65,17 +70,38 @@ def go():
 
         st.divider()
 
+        #-----------------#
+        # Class Resources #
+        #-----------------#
+        if 'Chemist' in class_selection:
+            # We don't need to load this most of the time most likely,
+            # so only do it when the chemist option is actually selected.
+            import mix_resources
+            with st.expander('Chemist Resources'):
+                mix_resources.go()
+
         with st.expander('About', expanded=True):
             st.markdown(constants.ABOUT_TEXT)
 
+        #--------------------#
+        # Additional Options #
+        #--------------------#
         with st.expander('Additional Options', expanded=False):
             # An optional checkbox to set debug functionality for the app.
             # debug_functionality = st.checkbox('Enable Debug Functionality', value=False, help='Enable debug levels of output')
 
-            # Reload the hint database
-            if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
-                st.cache_data.clear()
+            button_col1, button_col2 = st.columns(2)
 
+            with button_col1:
+                # Reload the hint database
+                if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
+                    st.cache_data.clear()
+
+            with button_col2:
+                if st.button('Reset Session', help='This will reset the browser session state (Warning: Experimental!)'):
+                    gen.reset_session()
+                    st.experimental_rerun()
+            
             show_original_md = st.checkbox('Simplified Display', value=False, help='Show the original markdown data instead of the expanders.')
 
     # Get the codes (KNT, MNK, etc)
@@ -89,13 +115,27 @@ def go():
     if search_value:
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
+    # Declare the page tabs
     enki_main_tab, enki_sub_tab1, enki_sub_tab2 = st.tabs(['Enkibot', 'Raw Output', 'Changelog'])
+
+    #-------------------#
+    # MAIN HINT SECTION #
+    #-------------------#
     with enki_main_tab:
         # Draw the sections
         full_body = ''
-        for section_row in hint_data.iterrows():
-            full_body += format_section(section_row, class_codes, expanded, debug, show_original_md) + '\n'
+        for idx, section_row in hint_data.iterrows():
+            full_body += format_section(
+                section_data=section_row, 
+                class_codes_list=class_codes, 
+                expanded_setting=expanded, 
+                debug=debug, 
+                simplified_display=show_original_md, 
+            ) + '\n'
 
+    #------------#
+    # Raw Output #
+    #------------#
     with enki_sub_tab1:
         if len(class_codes) > 0:
             file_classes = gen.format_class_list_as_str(class_codes, '_')
@@ -112,6 +152,9 @@ def go():
         )
         st.code(full_body, language='markdown')
 
+    #-----------#
+    # Changelog #
+    #-----------#
     with enki_sub_tab2:
         st.markdown('## Changelog')
 
