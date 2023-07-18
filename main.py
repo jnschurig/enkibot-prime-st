@@ -128,7 +128,10 @@ def go():
     # MAIN HINT SECTION #
     #-------------------#
     with enki_main_tab:
-        st.markdown('[World 1](#world-1) | [World 2](#world-2) | [World 3](#world-3)')
+        if show_original_md:
+            st.markdown('[World 1](#post-wind-shrine) | [World 2](#world-2-intro) | [World 3](#antlion)')
+        else:
+            st.markdown('[World 1](#world-1) | [World 2](#world-2) | [World 3](#world-3)')
 
         # Draw the sections
         full_body = ''
