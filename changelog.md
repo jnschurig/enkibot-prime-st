@@ -1,3 +1,7 @@
+#### 0.4.0 2023-07-18
+
+- Added world page anchors for quicker navigation to each world section (1, 2, and 3)
+
 #### 0.3.0 2023-07-16
 
 - Added Mix section in the sidebar. Select `Chemist` from the selector to enable it.

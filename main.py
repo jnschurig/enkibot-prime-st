@@ -10,7 +10,15 @@ def get_raw_data():
 
 def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False):
     # Function to draw the section data.
-    # section_dict = section_data[1]
+    if not simplified_display:
+        # Add section anchors.
+        if section_data['section_name'] == 'Post-Wind Shrine':
+            st.markdown('### World 1')
+        elif section_data['section_name'] == 'World 2 Intro':
+            st.markdown('### World 2',)
+        elif section_data['section_name'] == 'Antlion':
+            st.markdown('### World 3')
+
     new_section_list = json.loads(section_data['section_parts'])
 
     md_body = gen.class_match_sections(new_section_list, class_codes_list, debug=debug)
@@ -122,6 +130,9 @@ def go():
     # MAIN HINT SECTION #
     #-------------------#
     with enki_main_tab:
+        # st.markdown('[World 1](#post-wind-shrine) | [World 2](#world-2-intro) | [World 3](#antlion)')
+        st.markdown('[World 1](#world-1) | [World 2](#world-2) | [World 3](#world-3)')
+
         # Draw the sections
         full_body = ''
         for idx, section_row in hint_data.iterrows():
