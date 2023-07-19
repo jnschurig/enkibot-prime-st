@@ -1,4 +1,5 @@
 Name of Spell:
+  Display Name: "????" # In case the display name does not place nice with data formats.
   Alternate Name: "SNES Name"
   MP Cost: 0
   Learned From:
