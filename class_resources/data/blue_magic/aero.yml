@@ -1,0 +1,17 @@
+Aero:
+  MP Cost: 4
+  Learned From:
+  - Moldwynd
+  - Gigas
+  - Magissa
+  - Mykale
+  - Azulmagia
+  - Defeater
+    Required: "!Control"
+  Best Source:
+  - Moldwynd
+  - Gigas
+  - Magissa
+  Description: >
+    Wind-elemental damage. Single- or Multi-target.
+  FJF Recommended: Yes

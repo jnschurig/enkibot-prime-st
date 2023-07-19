@@ -10,7 +10,9 @@ def fetch_blue_data():
     return #pd.read_csv(csv_path, keep_default_na=False)
 
 def go():
-    st.title('!Blue Library')
+    st.title('!Blue Grimoire')
+
+    return 
 
 if __name__ == '__main__':
     st.set_page_config(

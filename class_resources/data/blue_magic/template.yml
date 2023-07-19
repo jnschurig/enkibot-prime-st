@@ -1,0 +1,27 @@
+Name of Spell:
+  Alternate Name: "SNES Name"
+  MP Cost: 0
+  Learned From:
+  - Monster name
+  - Another Monster
+  - Even this monster
+    Required: "!Ability" # In case this blue spell cannot be easily learned from this monster.
+  - Yet Another
+    Required: # In case there are multiple requirements for one monster, such as confuse + reflect.
+    - "!Ability"
+    - "Spell"
+    - "Status"
+  Earliest Acquisition:
+  - Monster name: Location
+  Best Source: # The recommended monster to learn the spell from.
+  - Monster name: Location
+  - Another Monster: Location
+  Warning: >
+    Possible warning text, such as level requirement or risks.
+  Description: >
+    A short, yet descriptive passage about the spell. 
+    What it does, what type of damage, etc.
+  FJF Recommended: Yes 
+  # Yes or No preferred here. Many blue spells 
+  # are not really valuable in a FJF run. Also 
+  # accepts True, False, On, Off

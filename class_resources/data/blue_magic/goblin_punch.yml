@@ -1,0 +1,21 @@
+Goblin Punch:
+  MP Cost: 0
+  Learned From:
+  - Goblin
+  - Black Goblin
+  - Gilgamesh (Big Bridge)
+  - Gobbledygook
+  - Azulmagia
+  - Sahagin
+    Required: "!Control"
+  - Nix
+    Required: "!Control"
+  Earliest Acquisition:
+    Black Goblin: Wind Shrine
+  Best Source:
+  - Goblin: Trap chest in Tule
+  - Black Goblin: Wind Shrine
+  Description: >
+    Single-target, non-elemental damage. Deals bonus damange 
+    when caster and target are the same level.
+  FJF Recommended: Yes
