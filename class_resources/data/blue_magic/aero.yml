@@ -8,10 +8,12 @@ Aero:
   - Azulmagia
   - Defeater
     Required: "!Control"
+  Earliest Acquisition:
+    Moldwynd: Wind Shrine
   Best Source:
-  - Moldwynd
-  - Gigas
-  - Magissa
+  - Moldwynd: Wind Shrine
+  - Magissa: North Mountain
+  - Gigas: Karnak 500
   Description: >
     Wind-elemental damage. Single- or Multi-target.
   FJF Recommended: Yes

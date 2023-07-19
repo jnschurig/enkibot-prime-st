@@ -1,0 +1,32 @@
+Vampire:
+  MP Cost: 2
+  Learned From:
+  - Steel Bat
+  - Blood Slime
+  - Abductor
+  - Zombie Dragon
+  - Enkidu
+  - Dark Aspic
+  - Python
+  - Mercury Bat
+  - Azulmagia
+  - Achelon
+    Required: 
+    - "!Control"
+    - "Restore Enemy MP"
+  - Dechirer
+    Required: 
+    - "!Control"
+    - "Restore Enemy MP"
+  - Shadow
+    Required: 
+    - "!Control"
+    - "Restore Enemy MP"
+  Earliest Acquisition:
+    Steel Bat: "Pirates' Hideout"
+  Best Source:
+  - Steel Bat: "Pirates' Hideout"
+  Description: >
+    Steal HP from an enemy and restore to self. 
+    Amount stolen is (Self Missing HP / 2). Single-target.
+  FJF Recommended: Yes

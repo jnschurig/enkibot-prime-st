@@ -1,0 +1,28 @@
+Flash:
+  MP Cost: 7
+  Learned From:
+  - Crew Dust
+  - Ramuh
+  - Neon
+  - Gilgamesh (Castle Exdeath)
+  - Necrophobe
+  - Azulmagia
+  - Parthenope 
+  - Headstone
+    Required: "Restore Enemy MP"
+  - Orukat
+    Required: 
+    - "!Control"
+    - "Restore Enemy MP"
+  - Stone Mask
+    Required: 
+    - "!Control"
+    - "Restore Enemy MP"
+  Earliest Acquisition:
+    Headstone: North Mountain
+  Best Source:
+  - Headstone: North Mountain
+  - Crew Dust: Fire-Powered Ship
+  Description: >
+    Attempts to blind all enemies. Multi-target.
+  FJF Recommended: Yes
