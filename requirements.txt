@@ -3,3 +3,6 @@ streamlit
 
 # pandas is required for dataframe manipulation
 pandas
+
+# For processing yaml data.
+pyyaml
