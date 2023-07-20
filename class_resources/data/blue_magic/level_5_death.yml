@@ -16,4 +16,9 @@ Level 5 Death:
   Description: >
     Inflict Death on enemies whose level is multiple of 5. Multi-target. 
     Learner's level must be a multiple of 5.
+  Warning: >
+    Be mindful of the party level when nearing the library. An entire 
+    party can be easily wiped out due to having the same level. On the 
+    other hand, gainng a little too much experience beforehand my require 
+    execcessive leveling to reach a multiple of 5.
   FJF Recommended: Yes

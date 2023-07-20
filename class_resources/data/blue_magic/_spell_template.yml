@@ -17,14 +17,14 @@ Name of Spell:
   Best Source: # The recommended monster to learn the spell from.
   - Monster name: Location
   - Another Monster: Location
+  Description: >
+    A short, yet descriptive passage about the spell. 
+    What it does, what type of damage, etc.
   Warning: >
     Possible warning text, such as level requirement or risks.
   Note: >
     Additional detail, possibly related to how to learn spell 
     from a recommended monster.
-  Description: >
-    A short, yet descriptive passage about the spell. 
-    What it does, what type of damage, etc.
   FJF Recommended: Yes 
   # Yes or No preferred here. Many blue spells 
   # are not really valuable in a FJF run. Also 

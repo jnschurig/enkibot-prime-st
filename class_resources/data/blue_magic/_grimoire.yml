@@ -1,34 +1,34 @@
 spells:
-  - Goblin Punch
-  - Aero
-  - Vampire
-  - Flash
-  - Pond's Chorus
-  - Moon Flute
-  - qqqq
-  - Self Destruct
-  - Aera
-  - Death Claw
-  - Aqua Breath
-  - Transfusion
-  - Missile
-  - Level 5 Death
-  - Off-Guard
-  - Magic Hammer
-  - Dark Spark
-  - Flame Thrower
-  - White Wind
-  - 1000 Needles
-  - Level 4 Graviga
-  - Time Slip
-  - Level 3 Flare
-  - Level 2 Old
-  - Aeroga
-  - Lilliputian Lyric
-  - Doom
-  - Roulette
-  - Mighty Guard
-  - Mind Blast
+  - goblin_punch.yml
+  - aero.yml
+  - vampire.yml
+  - flash.yml
+  - ponds_chorus.yml
+  - moon_flute.yml
+  - qqqq.yml
+  - self_destruct.yml
+  - aera.yml
+  - death_claw.yml
+  - aqua_breath.yml
+  - transfusion.yml
+  - missile.yml
+  - level_5_death.yml
+  - off_guard.yml
+  - magic_hammer.yml
+  - dark_spark.yml
+  - flame_thrower.yml
+  - white_wind.yml
+  - 1000_needles.yml
+  - level_4_graviga.yml
+  - time_slip.yml
+  - level_3_flare.yml
+  - level_2_old.yml
+  - aeroga.yml
+  - lilliputian_lyric.yml
+  - doom.yml
+  - roulette.yml
+  - mighty_guard.yml
+  - mind_blast.yml
 sources: 
 - Blue Magic: "https://www.rpgsite.net/feature/11955-final-fantasy-v-blue-magic-how-to-learn-every-spell-for-the-blue-mage"
 - Bestiary: "https://finalfantasy.fandom.com/wiki/Final_Fantasy_Wiki"
@@ -38,14 +38,17 @@ Notes:
     If the effects of the spell are blocked, dodged, reflected, or it misses, it 
     will not be learned. After the spell hits the learner, the party must WIN the 
     battle. If the battle ends in party wipeout or escape, the spell is not learned. 
-    A blue spell only need be learned by one character to be used by the entire party.
+    A blue spell only need be learned by one character to be used by the entire party.    
+    All blue mages inherently have Learn, even if it isn't explicitly equipped as an 
+    ability. Other classes require having Learn set as an ability to be able to learn 
+    !Blue skills. 
 - Advanced: >
-    Some monsters can only teach their blue spell through the use of !Control from 
-    the Beastmaster class. Others still may ALSO require that a monster have reflect cast 
+    Some monsters can only teach their blue spell through the use of **!Control** from 
+    the Beastmaster class. Others still may ALSO require that a monster have Reflect cast 
     on them so that the non-targetable spell can be reflected off a monster and land 
-    on a learner. Some monsters may only use their !Blue spell when under the 
+    on a learner. Yet other monsters may only use their !Blue spell when under the 
     influence of Confuse.
-- Level n Spell: >
+- Level "n" Spell: >
     The learner must have a level which is a multiple of n and be affected by the spell. 
     In the case of Level 5 Death, the learner must have a level which is a multiple of 5, 
     AND they must die to learn the spell. Be careful not to have all party members at the 

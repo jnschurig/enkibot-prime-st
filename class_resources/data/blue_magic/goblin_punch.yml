@@ -14,11 +14,11 @@ Goblin Punch:
   Earliest Acquisition:
     Black Goblin: Wind Shrine
   Best Source:
-  - Goblin: Trap chest in Tule
   - Black Goblin: Wind Shrine
+  - Goblin: Trap chest in Tule
   Description: >
     Single-target, non-elemental damage. Deals 8x damange when 
-    caster and target are the same level. Uses attach stat as 
+    caster and target are the same level. Uses attack stat as 
     damage base. Ignores weapon effects such as Run on Chicken 
     Knife or reduced damage from Exalipoor. Single-target.
   FJF Recommended: Yes
