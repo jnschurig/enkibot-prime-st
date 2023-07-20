@@ -1,0 +1,20 @@
+Magic Hammer:
+  Alternate Name: MagHammer
+  MP Cost: 3
+  Learned From:
+  - Byblos
+  - Drippy
+  - Apanda
+  - Azulmagia
+  - Oiseaerare:
+    - "!Control"
+  - Cursed Being:
+    - "!Control"
+  Earliest Acquisition:
+    Byblos: Library
+  Best Source:
+  - Byblos: Library
+  - Drippy: Drakenvale
+  Description: >
+    Reduce target MP by 1/2. Single-target.
+  FJF Recommended: Yes

@@ -1,0 +1,22 @@
+Off-Guard:
+  Alternate Name: GuardOff
+  MP Cost: 19
+  Learned From:
+  - Magic Dragon
+  - Ziggurat Gigas
+  - Ushabti
+  - Azulmagia
+  - Page 256:
+    - "!Control"
+  - Shadow:
+    - "!Control"
+  - The Damned:
+    - "!Control"
+  Earliest Acquisition:
+    Page 256: Library
+  Best Source:
+  - Page 256: Library
+  - Magic Dragon: Castle Exdeath
+  Description: >
+    Reduce target Defense by 1/2. Single-target.
+  FJF Recommended: Yes

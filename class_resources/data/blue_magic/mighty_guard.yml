@@ -1,0 +1,21 @@
+Mighty Guard:
+  Alternate Name: Guardian
+  MP Cost: 72
+  Learned From:
+  - Ironclad:
+    - "!Control"
+  - Stingray:
+    - "!Control"
+  - Shinryu:
+    - "!Control"
+  - Azulmagia:
+    - "!Control"
+  Earliest Acquisition:
+    Stingray: Ocean Above Sunken Walse Tower (World 3)
+  Best Source:
+  - Stingray: Ocean Above Sunken Walse Tower (World 3)
+  Description: >
+    Applies Protect, Shell, and Float to entire party. Multi-target.
+  Note:
+    Can only be obtained using Beastmaster !Control ability.
+  FJF Recommended: Yes

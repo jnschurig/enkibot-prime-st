@@ -1,0 +1,21 @@
+Self Destruct:
+  Alternate Name: Exploder
+  MP Cost: 1
+  Learned From:
+  - Motor Trap
+  - Bomb
+  - Purobolos
+  - Grenade
+  - Prototype:
+    - "!Control"
+  - Unknown (#171):
+    - "!Control"
+  Earliest Acquisition:
+    Motor Trap: Fire-Powered Ship (Use Thunder)
+  Best Source:
+  - Motor Trap: Fire-Powered Ship (Use Thunder)
+  - Purobolos: Walse Meteor
+  - Prototype: Islands Southwest of Crescent
+  Description: >
+    Kills the caster and deals damage equal to their current HP. Single-target.
+  FJF Recommended: No

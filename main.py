@@ -73,10 +73,14 @@ def go():
         #-----------------#
         # Class Resources #
         #-----------------#
+        if 'Blue-Mage' in class_selection:
+            from class_resources import blue_resources
+            with st.expander('Blue Resources'):
+                blue_resources.go(True)
         if 'Chemist' in class_selection:
             # We don't need to load this most of the time most likely,
             # so only do it when the chemist option is actually selected.
-            import mix_resources
+            from class_resources import mix_resources
             with st.expander('Chemist Resources'):
                 mix_resources.go()
 

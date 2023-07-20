@@ -1,0 +1,22 @@
+Flame Thrower:
+  Alternate Name: Burn Ray
+  MP Cost: 5
+  Spell Power: 50
+  Learned From:
+  - Prototype
+  - Mecha Head
+  - Flame Thrower
+  - Omega
+  - Triton
+  - Great Dragon
+  - Azulmagia
+  - Mindflayer:
+    - "!Control"
+  Earliest Acquisition:
+    Prototype: Islands Southwest of Crescent
+  Best Source:
+  - Flame Thrower: Sky Fortress Exterior
+  - Prototype: Islands Southwest of Crescent
+  Description: >
+    Deals Fire damage. Pierces Reflect. Single-target.
+  FJF Recommended: Yes
