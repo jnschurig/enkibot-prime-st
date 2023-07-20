@@ -1,0 +1,20 @@
+Missile:
+  Alternate Name: Pep Up
+  MP Cost: 7
+  Learned From:
+  - Prototype
+  - Rocket Launcher
+  - Enkidu
+  - Gilgamesh (Xezat's Fleet)
+  - Mecha Head
+  - Soul Cannon
+  - Azulmagia
+  - Motor Trap:
+    - "!Control"
+  Earliest Acquisition:
+    Motor Trap: Fire-Powered Ship
+  Best Source:
+  - Rocket Launcher: Sky Fortress Exterior
+  Description: >
+    Reduce target HP to 1/4 of max. Single-target.
+  FJF Recommended: Yes

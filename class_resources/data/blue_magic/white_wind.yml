@@ -1,0 +1,29 @@
+White Wind:
+  Alternate Name: WhiteWind
+  MP Cost: 28
+  Learned From:
+  - Enchanted Fan:
+    - "!Control"
+  - Dark Elemental:
+    - "!Control"
+  - White Flame:
+    - "!Control"
+  - Hellraiser:
+    - "!Control"
+  - Enkidu:
+    - "!Control"
+  - Parthenope:
+    - "!Control"
+  - Necromancer:
+    - "!Control"
+  - Azulmagia:
+    - "!Control"
+  Earliest Acquisition:
+    Enchanted Fan: Ronka Ruins
+  Best Source:
+  - Enchanted Fan: Ronka Ruins
+  Description: >
+    Restores party HP equal to caster's current HP. Multi-target.
+  Note: >
+    Can only be obtained using Beastmaster !Control ability.
+  FJF Recommended: Yes

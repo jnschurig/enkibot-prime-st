@@ -1,6 +1,9 @@
 #### 0.4.0 2023-07-18
 
 - Added world page anchors for quicker navigation to each world section (1, 2, and 3)
+- Added !Blue section for blue magic. Select `Blue-Mage` from the selector to enable it.
+- Moved class resource files into a separate directory to prevent cluttering.
+- Changed file-system lookups to fully-qualified vs relative.
 
 #### 0.3.0 2023-07-16
 
