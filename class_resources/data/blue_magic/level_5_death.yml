@@ -1,0 +1,19 @@
+Level 5 Death:
+  Alternate Name: L5 Doom
+  MP Cost: 22
+  Learned From:
+  - Page 64
+  - Level Checker
+  - Executor
+  - Enuo
+  - Azulmagia
+  - Level Tricker:
+    - "!Control"
+  Earliest Acquisition:
+    Page 64: Library
+  Best Source:
+  - Page 64: Library
+  Description: >
+    Inflict Death on enemies whose level is multiple of 5. Multi-target. 
+    Learner's level must be a multiple of 5.
+  FJF Recommended: Yes

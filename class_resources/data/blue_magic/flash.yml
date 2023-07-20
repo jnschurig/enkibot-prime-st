@@ -8,16 +8,14 @@ Flash:
   - Necrophobe
   - Azulmagia
   - Parthenope 
-  - Headstone
-    Required: "Restore Enemy MP"
-  - Orukat
-    Required: 
+  - Headstone:
+    - Restore Enemy MP
+  - Orukat:
     - "!Control"
-    - "Restore Enemy MP"
-  - Stone Mask
-    Required: 
+    - Restore Enemy MP
+  - Stone Mask:
     - "!Control"
-    - "Restore Enemy MP"
+    - Restore Enemy MP
   Earliest Acquisition:
     Headstone: North Mountain
   Best Source:

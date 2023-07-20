@@ -1,13 +1,14 @@
 Aero:
   MP Cost: 4
+  Spell Power: 20
   Learned From:
   - Moldwynd
   - Gigas
   - Magissa
   - Mykale
   - Azulmagia
-  - Defeater
-    Required: "!Control"
+  - Defeater:
+    - "!Control"
   Earliest Acquisition:
     Moldwynd: Wind Shrine
   Best Source:

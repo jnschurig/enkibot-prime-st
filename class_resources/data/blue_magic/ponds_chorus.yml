@@ -1,4 +1,5 @@
 Pond's Chorus:
+  Alternate Name: Toad Song
   MP Cost: 5
   Learned From:
   - Elf Toad
@@ -8,8 +9,8 @@ Pond's Chorus:
   - Gilgamesh
   - Azulmagia
   - Lemure
-  - Vilia
-    Required: "!Control"
+  - Vilia:
+    - "!Control"
   Earliest Acquisition:
     Elf Toad: Walse Tower (enemy is alone)
   Best Source:

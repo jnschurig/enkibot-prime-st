@@ -1,4 +1,5 @@
 Vampire:
+  Alternate Name: Red Feast
   MP Cost: 2
   Learned From:
   - Steel Bat
@@ -10,18 +11,15 @@ Vampire:
   - Python
   - Mercury Bat
   - Azulmagia
-  - Achelon
-    Required: 
+  - Achelon:
     - "!Control"
-    - "Restore Enemy MP"
-  - Dechirer
-    Required: 
+    - Restore Enemy MP
+  - Dechirer:
     - "!Control"
-    - "Restore Enemy MP"
-  - Shadow
-    Required: 
+    - Restore Enemy MP
+  - Shadow:
     - "!Control"
-    - "Restore Enemy MP"
+    - Restore Enemy MP
   Earliest Acquisition:
     Steel Bat: "Pirates' Hideout"
   Best Source:

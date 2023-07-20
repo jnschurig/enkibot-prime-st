@@ -7,20 +7,18 @@ qqqq:
   - Wild Nakk
   - Behemoth
   - Azulmagia
-  - King Behemoth
-    Required: "!Control"
-  - Mecha Head
-    Required: "!Control"
-  - Traveler
-    Required: "!Control"
-  - Gel Fish
-    Required: 
+  - King Behemoth:
     - "!Control"
-    - "Restore Enemy MP"
-  - Numb Blade
-    Required: 
+  - Mecha Head:
     - "!Control"
-    - "Restore Enemy MP"
+  - Traveler:
+    - "!Control"
+  - Gel Fish:
+    - "!Control"
+    - Restore Enemy MP
+  - Numb Blade:
+    - "!Control"
+    - Restore Enemy MP
   Earliest Acquisition:
     Wild Nakk: Karnak Area (Forest)
   Best Source:

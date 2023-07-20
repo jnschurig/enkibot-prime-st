@@ -19,6 +19,9 @@ Name of Spell:
   - Another Monster: Location
   Warning: >
     Possible warning text, such as level requirement or risks.
+  Note: >
+    Additional detail, possibly related to how to learn spell 
+    from a recommended monster.
   Description: >
     A short, yet descriptive passage about the spell. 
     What it does, what type of damage, etc.

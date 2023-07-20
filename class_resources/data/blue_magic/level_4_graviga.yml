@@ -1,0 +1,17 @@
+Level 4 Graviga:
+  Alternate Name: L4 Quarter
+  MP Cost: 9
+  Learned From:
+  - Ghidra
+  - Level Tricker
+  - Level Checker
+  - Executor
+  - Azulmagia
+  Earliest Acquisition:
+    Ghidra: Ronka Ruins
+  Best Source:
+  - Level Tricker: Barrier Tower
+  Description: >
+    Reduce enemy HP to 1/4 whose level is a multiple of 4. Multi-target. 
+    Learner's level must be a multiple of 4.
+  FJF Recommended: No

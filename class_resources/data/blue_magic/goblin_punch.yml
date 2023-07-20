@@ -1,4 +1,5 @@
 Goblin Punch:
+  Alternate Name: GobPunch
   MP Cost: 0
   Learned From:
   - Goblin
@@ -6,16 +7,18 @@ Goblin Punch:
   - Gilgamesh (Big Bridge)
   - Gobbledygook
   - Azulmagia
-  - Sahagin
-    Required: "!Control"
-  - Nix
-    Required: "!Control"
+  - Sahagin:
+    - "!Control"
+  - Nix:
+    - "!Control"
   Earliest Acquisition:
     Black Goblin: Wind Shrine
   Best Source:
   - Goblin: Trap chest in Tule
   - Black Goblin: Wind Shrine
   Description: >
-    Single-target, non-elemental damage. Deals bonus damange 
-    when caster and target are the same level.
+    Single-target, non-elemental damage. Deals 8x damange when 
+    caster and target are the same level. Uses attach stat as 
+    damage base. Ignores weapon effects such as Run on Chicken 
+    Knife or reduced damage from Exalipoor. Single-target.
   FJF Recommended: Yes

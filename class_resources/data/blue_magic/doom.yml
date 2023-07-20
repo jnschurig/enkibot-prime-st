@@ -1,9 +1,19 @@
 Doom:
-  alternate: Condemn
-  mp: 10 
-  learned_from:
-    - Exdeath
-    - Azulmagia
-    - Hades
-    - "Unknown #172"
-    - "The Damned"
+  Alternate Name: Condemn
+  MP Cost: 10 
+  Learned From:
+  - Exdeath
+  - Death Dealer
+  - Unknown (#172)
+  - Jackanapes:
+    - "!Control"
+  - The Damned:
+    - "!Control"
+  Earliest Acquisition:
+    Jackanapes: Walse Castle Basement
+  Best Source:
+  - The Damned: Pyramid of Moore
+  - Unknown (#172): Great Sea Trench
+  Description: >
+    Kills one enemy after 30 seconds. Single-target.
+  FJF Recommended: No
