@@ -10,20 +10,16 @@ White Wind:
     - "!Control"
   - Hellraiser:
     - "!Control"
-  - Enkidu:
-    - "!Control"
   - Parthenope:
     - "!Control"
   - Necromancer:
-    - "!Control"
-  - Azulmagia:
     - "!Control"
   Earliest Acquisition:
     Enchanted Fan: Ronka Ruins
   Best Source:
   - Enchanted Fan: Ronka Ruins
   Description: >
-    Restores party HP equal to caster's current HP. Multi-target.
+    Restores party HP equal to caster's current HP. Pierces Reflect. Multi-target.
   Note: >
     Can only be obtained using Beastmaster !Control ability.
   FJF Recommended: Yes

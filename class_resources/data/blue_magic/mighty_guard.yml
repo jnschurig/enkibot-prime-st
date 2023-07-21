@@ -9,13 +9,16 @@ Mighty Guard:
   - Shinryu:
     - "!Control"
   - Azulmagia:
-    - "!Control"
+    - "Reflect"
   Earliest Acquisition:
     Stingray: Ocean Above Sunken Walse Tower (World 3)
   Best Source:
   - Stingray: Ocean Above Sunken Walse Tower (World 3)
+  - Azulmagia: Interdimensional Rift (See Note)
   Description: >
     Applies Protect, Shell, and Float to entire party. Multi-target.
   Note:
-    Can only be obtained using Beastmaster !Control ability.
+    For learning from Azulmagia, any source of Reflect will do the trick. 
+    Azulmagia can cast Mighty Guard on their third turn and again on every 
+    sixth turn thereafter. 
   FJF Recommended: Yes
