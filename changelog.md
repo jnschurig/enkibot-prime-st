@@ -1,4 +1,4 @@
-#### 0.4.0 2023-07-20
+#### 0.4.0 2023-07-20 
 
 - Added !Blue section for blue magic. Select `Blue-Mage` from the selector to enable it.
 - Moved class resource files into a separate directory to prevent cluttering.
