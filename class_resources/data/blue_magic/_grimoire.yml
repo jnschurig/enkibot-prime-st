@@ -30,8 +30,8 @@ spells:
   - mighty_guard.yml
   - mind_blast.yml
 sources: 
-- Blue Magic: "https://www.rpgsite.net/feature/11955-final-fantasy-v-blue-magic-how-to-learn-every-spell-for-the-blue-mage"
-- Bestiary: "https://finalfantasy.fandom.com/wiki/Final_Fantasy_Wiki"
+  Blue Magic: "https://www.rpgsite.net/feature/11955-final-fantasy-v-blue-magic-how-to-learn-every-spell-for-the-blue-mage"
+  Bestiary: "https://finalfantasy.fandom.com/wiki/Bestiary_(Final_Fantasy_V)"
 Notes:
 - Learning: >
     To learn any !Blue magic, the spell must successfully land against the learner. 

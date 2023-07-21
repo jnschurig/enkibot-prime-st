@@ -172,6 +172,8 @@ def go(use_narrow_space:bool=True):
 
     for idx, entry in blue_df.iterrows():
         format_blue_entry(entry, idx)
+
+    st.markdown('Sources | [Blue Magic](' + blue_magic_lookup['sources']['Blue Magic'] + ') | [Bestiary](' + blue_magic_lookup['sources']['Bestiary'] + ')')
     
     return 
 
