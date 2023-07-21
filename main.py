@@ -10,12 +10,18 @@ def get_raw_data():
 
 def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False):
     # Function to draw the section data.
-    # section_dict = section_data[1]
+
     new_section_list = json.loads(section_data['section_parts'])
 
     md_body = gen.class_match_sections(new_section_list, class_codes_list, debug=debug)
 
     if not simplified_display:
+        # Add world-specific section anchors.
+        if section_data['section_name'] in constants.SECTION_NAV_ANCHORS.keys():
+            anchor_text = constants.SECTION_NAV_ANCHORS[section_data['section_name']]
+            st.info(f'#### {anchor_text}')
+
+        # Draw Section
         with st.expander(section_data['section_name'], expanded=expanded_setting):
             st.markdown(md_body)
 
@@ -126,6 +132,11 @@ def go():
     # MAIN HINT SECTION #
     #-------------------#
     with enki_main_tab:
+        if show_original_md:
+            st.markdown('[World 1](#post-wind-shrine) | [World 2](#world-2-intro) | [World 3](#antlion)')
+        else:
+            st.markdown('[World 1](#world-1) | [World 2](#world-2) | [World 3](#world-3)')
+
         # Draw the sections
         full_body = ''
         for idx, section_row in hint_data.iterrows():
@@ -165,6 +176,9 @@ def go():
         with open('changelog.md', 'r') as f:
             changelog_text = f.read()
         st.markdown(changelog_text)
+
+    # Footer URL to go back to the top.
+    st.markdown('[Top](#enkibot-prime-st)')
 
     return 
 
