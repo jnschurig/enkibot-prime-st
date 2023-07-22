@@ -26,5 +26,7 @@ White Wind:
   Description: >
     Restores party HP equal to caster's current HP. Pierces Reflect. Multi-target.
   Note: >
-    Can only be obtained using Beastmaster !Control ability.
+    In the Pixel Remaster version of the game, Confuse will make monsters 
+    incorrectly cast White Wind on the enemy team, rather than the player 
+    team. In other versions this works correctly.
   FJF Recommended: Yes

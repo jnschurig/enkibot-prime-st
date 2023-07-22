@@ -1,7 +1,8 @@
-import constants, general as gen, parse_hint_db as ph
 import streamlit as st
 import pandas as pd
 import os, json, random
+import constants, general as gen, parse_hint_db as ph
+from class_resources import blue_resources
 
 @st.cache_data
 def get_raw_data():
@@ -79,10 +80,12 @@ def go():
         #-----------------#
         # Class Resources #
         #-----------------#
+        # BLUE MAGE
         if 'Blue-Mage' in class_selection:
-            from class_resources import blue_resources
             with st.expander('Blue Resources'):
                 blue_resources.go(True)
+
+        # CHEMIST
         if 'Chemist' in class_selection:
             # We don't need to load this most of the time most likely,
             # so only do it when the chemist option is actually selected.
@@ -126,7 +129,7 @@ def go():
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
     # Declare the page tabs
-    enki_main_tab, enki_sub_tab1, enki_sub_tab2 = st.tabs(['Enkibot', 'Raw Output', 'Changelog'])
+    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue Grimoire', 'Changelog'])
 
     #-------------------#
     # MAIN HINT SECTION #
@@ -151,7 +154,7 @@ def go():
     #------------#
     # Raw Output #
     #------------#
-    with enki_sub_tab1:
+    with enki_raw_output_tab:
         if len(class_codes) > 0:
             file_classes = gen.format_class_list_as_str(class_codes, '_')
         elif debug:
@@ -167,10 +170,16 @@ def go():
         )
         st.code(full_body, language='markdown')
 
+    #---------------#
+    # Blue Grimoire #
+    #---------------#
+    with enki_blue_tab:
+        blue_resources.go(False)
+
     #-----------#
     # Changelog #
     #-----------#
-    with enki_sub_tab2:
+    with enki_changelog_tab:
         st.markdown('## Changelog')
 
         with open('changelog.md', 'r') as f:
