@@ -4,20 +4,25 @@ White Wind:
   Learned From:
   - Enchanted Fan:
     - "!Control"
+    - "Confuse"
   - Dark Elemental:
     - "!Control"
   - White Flame:
     - "!Control"
+    - "Confuse"
   - Hellraiser:
     - "!Control"
+    - "Confuse"
+    - "!Release"
   - Parthenope:
-    - "!Control"
+    - "!Release"
   - Necromancer:
     - "!Control"
   Earliest Acquisition:
     Enchanted Fan: Ronka Ruins
   Best Source:
   - Enchanted Fan: Ronka Ruins
+  - Hellraiser: Castle Exdeath
   Description: >
     Restores party HP equal to caster's current HP. Pierces Reflect. Multi-target.
   Note: >

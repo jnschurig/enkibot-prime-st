@@ -6,6 +6,7 @@ Mighty Guard:
     - "!Control"
   - Stingray:
     - "!Control"
+    - "Confuse"
   - Shinryu:
     - "!Control"
   - Azulmagia:
@@ -21,4 +22,7 @@ Mighty Guard:
     For learning from Azulmagia, any source of Reflect will do the trick. 
     Azulmagia can cast Mighty Guard on their third turn and again on every 
     sixth turn thereafter. 
+    In the Pixel Remaster version of the game, Confuse will make Stingray 
+    incorrectly cast White Wind on the enemy team, rather than the player 
+    team. In other versions this works correctly.
   FJF Recommended: Yes
