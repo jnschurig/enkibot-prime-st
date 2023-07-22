@@ -1,4 +1,4 @@
-#### 0.4.0 2023-07-20
+#### 0.4.0 2023-07-22
 
 - Added world page anchors for quicker navigation to each world section (1, 2, and 3)
 - Added !Blue section for blue magic. Select `Blue-Mage` from the selector to enable it.
