@@ -71,7 +71,7 @@ def monster_info(monster_dict:dict):
 
     return monster_name, monster_info
 
-def format_blue_entry(row_data, idx_data:int=None, use_narrow_spacing:bool=True):
+def format_blue_entry(row_data, series_key:str=None, use_narrow_spacing:bool=True):
     with st.container():
         # Make sure we have an actual dict on our hands.
         if type(row_data['entry']) is str:
@@ -153,6 +153,10 @@ def format_blue_entry(row_data, idx_data:int=None, use_narrow_spacing:bool=True)
 def go(use_narrow_space:bool=True):
     st.title('!Blue Grimoire')
 
+    series_key = 'normal'
+    if use_narrow_space:
+        series_key = 'narrow'
+
     blue_magic_lookup = blue_data()
 
     blue_df = pd.DataFrame.from_dict(blue_magic_lookup['spells'], orient='columns')
@@ -163,7 +167,8 @@ def go(use_narrow_space:bool=True):
         value='', 
         placeholder='Search Blue Spells', 
         label_visibility='collapsed', 
-        help='Search blue magic for key terms or values'
+        help='Search blue magic for key terms or values',
+        key=f'blue_search_{series_key}'
     )
 
     # Show the Blue class notes.
@@ -174,7 +179,7 @@ def go(use_narrow_space:bool=True):
         blue_df = blue_df[blue_df.apply(lambda row: row.astype(str).str.contains(blue_search_value, case=False).any(), axis=1)]
 
     for idx, entry in blue_df.iterrows():
-        format_blue_entry(entry, idx, use_narrow_space)
+        format_blue_entry(entry, series_key, use_narrow_space)
 
     st.markdown('Sources | [Blue Magic](' + blue_magic_lookup['sources']['Blue Magic'] + ') | [Bestiary](' + blue_magic_lookup['sources']['Bestiary'] + ')')
     
