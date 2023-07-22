@@ -31,7 +31,7 @@ def blue_data():
     blue_index = fetch_yaml_data()
 
     all_spell_detail = []
-    for idx, file_name in enumerate(blue_index['spells']):
+    for file_name in blue_index['spells']:
         spell_detail = fetch_yaml_data(file_name)
         spell_name = next(iter(spell_detail))
         spell_detail = {
@@ -71,7 +71,7 @@ def monster_info(monster_dict:dict):
 
     return monster_name, monster_info
 
-def format_blue_entry(row_data, idx_data:int=None):
+def format_blue_entry(row_data, idx_data:int=None, use_narrow_spacing:bool=True):
     with st.container():
         # Make sure we have an actual dict on our hands.
         if type(row_data['entry']) is str:
@@ -96,8 +96,14 @@ def format_blue_entry(row_data, idx_data:int=None):
         if blue_entry['FJF Recommended']:
             col3.markdown('#### :green[Good for FJF]')
 
+        # Description
+        st.info(blue_entry['Description'])
+
         # Larger detail information columns
-        detail_col1, detail_col2 = st.columns([3, 2], gap='medium')
+        if use_narrow_spacing:
+            detail_col1, detail_col2 = st.columns([3, 2], gap='medium')
+        else:
+            detail_col1, detail_col2 = st.columns(2, gap='medium')
 
         # List of stats
         stats = '- MP Cost: ' + str(blue_entry['MP Cost']) + '\n'
@@ -132,16 +138,13 @@ def format_blue_entry(row_data, idx_data:int=None):
                 all_sources += f'- {monster_entry} \n'
         detail_col2.caption(all_sources)
 
-        # Warning text, if any
-        if 'Warning' in blue_entry:
-            st.warning('Warning: ' + blue_entry['Warning'])
-
-        # Description
-        st.info(blue_entry['Description'])
-
         # Note text, if any
         if 'Note' in blue_entry:
             st.caption('Note: ' + blue_entry['Note'])
+
+        # Warning text, if any
+        if 'Warning' in blue_entry:
+            st.warning('Warning: ' + blue_entry['Warning'])
 
         st.divider()
 
@@ -171,7 +174,7 @@ def go(use_narrow_space:bool=True):
         blue_df = blue_df[blue_df.apply(lambda row: row.astype(str).str.contains(blue_search_value, case=False).any(), axis=1)]
 
     for idx, entry in blue_df.iterrows():
-        format_blue_entry(entry, idx)
+        format_blue_entry(entry, idx, use_narrow_space)
 
     st.markdown('Sources | [Blue Magic](' + blue_magic_lookup['sources']['Blue Magic'] + ') | [Bestiary](' + blue_magic_lookup['sources']['Bestiary'] + ')')
     
