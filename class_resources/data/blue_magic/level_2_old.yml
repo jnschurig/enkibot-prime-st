@@ -1,0 +1,20 @@
+Level 2 Old:
+  Alternate Name: L2 Old
+  MP Cost: 11
+  Learned From:
+  - Magic Dragon
+  - Level Checker
+  - Executor
+  - Shinryu
+  - Azulmagia
+  - Level Tricker:
+    - "!Control"
+  Earliest Acquisition:
+    Level Tricker: Barrier Tower
+  Best Source:
+  - Level Tricker: Barrier Tower
+  - Magic Dragon: Castle Exdeath
+  Description: >
+    Inflict Old on enemies whose level is multiple of 2. Multi-target. 
+    Learner's level must be a multiple of 2.
+  FJF Recommended: Yes

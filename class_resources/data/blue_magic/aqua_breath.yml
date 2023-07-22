@@ -1,0 +1,22 @@
+Aqua Breath:
+  Alternate Name: AquaRake
+  MP Cost: 38
+  Spell Power: 75
+  Learned From:
+  - Dhorme Chimera
+  - Manticore
+  - Leviathan
+  - Bahamut
+  - Crystal
+  - Enuo
+  - Famed Mimic Gogo
+  - Aquagel:
+    - "!Control"
+  Earliest Acquisition:
+    Dhorme Chimera: Desert Near Library
+  Best Source:
+  - Dhorme Chimera: Desert Near Library
+  Description: >
+    Non-elemental damage. Deals 8x damage to 
+    desert enemies. Multi-target.
+  FJF Recommended: Yes

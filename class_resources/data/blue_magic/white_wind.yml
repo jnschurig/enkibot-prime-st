@@ -1,0 +1,32 @@
+White Wind:
+  Alternate Name: WhiteWind
+  MP Cost: 28
+  Learned From:
+  - Enchanted Fan:
+    - "!Control"
+    - "Confuse"
+  - Dark Elemental:
+    - "!Control"
+  - White Flame:
+    - "!Control"
+    - "Confuse"
+  - Hellraiser:
+    - "!Control"
+    - "Confuse"
+    - "!Release"
+  - Parthenope:
+    - "!Release"
+  - Necromancer:
+    - "!Control"
+  Earliest Acquisition:
+    Enchanted Fan: Ronka Ruins
+  Best Source:
+  - Enchanted Fan: Ronka Ruins
+  - Hellraiser: Castle Exdeath
+  Description: >
+    Restores party HP equal to caster's current HP. Pierces Reflect. Multi-target.
+  Note: >
+    In the Pixel Remaster version of the game, Confuse will make monsters 
+    incorrectly cast White Wind on the enemy team, rather than the player 
+    team. In other versions this works correctly.
+  FJF Recommended: Yes

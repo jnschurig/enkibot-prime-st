@@ -1,0 +1,23 @@
+1000 Needles:
+  Alternate Name: Blowfish
+  MP Cost: 25
+  Learned From:
+  - Lamia Queen
+  - Lamia:
+    - "!Control"
+  - Cactus:
+    - "!Control"
+  - Hedgehog:
+    - "!Control"
+  - Lemure:
+    - "!Control"
+  - Mykale:
+    - "!Control"
+  Earliest Acquisition:
+    Lamia: Ronka Ruins
+  Best Source:
+  - Lamia: Ronka Ruins
+  - Lamia Queen: Pyramid of Moore
+  Description: >
+    Deals exactly 1000 Damage to target. Always. Single-target.
+  FJF Recommended: No

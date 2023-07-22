@@ -1,0 +1,31 @@
+Aeroga:
+  Alternate Name: Aero 3
+  MP Cost: 24
+  Spell Power: 140
+  Learned From:
+  - Metamorph
+  - Magic Dragon
+  - Elm Gigas
+  - Baldanders
+  - Dark Elemental
+  - Grand Aevis
+  - Enchanted Fan
+  - Neo Exdeath
+  - Cherie:
+    - "!Control"
+  - Ziggurat Gigas:
+    - "!Control"
+  Earliest Acquisition:
+    Metamorph: Ghido's Cave (See Note)
+  Best Source:
+  - Metamorph: Ghido's Cave (See Note)
+  - Elm Gigas: Near Library (Grass, World 3)
+  Description: >
+    Wind-elemental damage. Single- or Multi-target.
+  FJF Recommended: Yes
+  Note: >
+    This spell can be learned from the Enchanted Fan that Metamorph 
+    temporarily becomes. Metamorph can cycle through 3 distinct monsters 
+    during each encounter. The desired "pack" is Ifrit, Wyvern, and 
+    Enchanted Fan. This version of the encounter happens only in the 
+    early rooms of Ghido's cave. 

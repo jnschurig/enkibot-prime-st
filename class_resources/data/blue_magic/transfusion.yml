@@ -1,0 +1,23 @@
+Transfusion:
+  Alternate Name: Pep Up
+  MP Cost: 13
+  Learned From:
+  - Mithril Dragon:
+    - "!Control"
+  - Gargoyle:
+    - "!Control"
+  - Birosotris:
+    - "!Control"
+  - Devilfish:
+    - "!Control"
+  - Unknown (#169):
+    - "!Control"
+  - Mover:
+    - "!Control"
+  Earliest Acquisition:
+    Mithril Dragon: Forest Near Library
+  Best Source:
+  - Mithril Dragon: Forest Near Library
+  Description: >
+    Sacrifice self to fully restore target's HP and MP. Single-target.
+  FJF Recommended: No

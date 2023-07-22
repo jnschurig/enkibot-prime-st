@@ -1,0 +1,22 @@
+Level 3 Flare:
+  Alternate Name: L3 Doom
+  MP Cost: 18
+  Learned From:
+  - Level Checker
+  - Executor
+  - Tunneler
+  - Exdeath
+  - Shinryu
+  - Red Dragon:
+    - "!Control"
+  - Archeosaur:
+    - "!Control"
+  Earliest Acquisition:
+    Red Dragon: Barrier Tower (Trap Chest)
+  Best Source:
+  - Red Dragon: Barrier Tower (Trap Chest
+  - Exdeath: Castle Exdeath
+  Description: >
+    Cast Flare on enemies whose level is multiple of 3. Multi-target. 
+    Learner's level must be a multiple of 3.
+  FJF Recommended: Yes

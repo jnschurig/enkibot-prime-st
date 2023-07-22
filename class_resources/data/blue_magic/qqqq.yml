@@ -1,0 +1,33 @@
+qqqq:
+  Display Name: "????"
+  Alternate Name: "? ? ? ?"
+  MP Cost: 3
+  Learned From:
+  - Kuza Beast
+  - Tyrannosaur
+  - Wild Nakk
+  - Behemoth
+  - Azulmagia
+  - King Behemoth:
+    - "!Control"
+  - Mecha Head:
+    - "!Control"
+  - Traveler:
+    - "!Control"
+  - Gel Fish:
+    - "!Control"
+    - Restore Enemy MP
+  - Numb Blade:
+    - "!Control"
+    - Restore Enemy MP
+  Earliest Acquisition:
+    Wild Nakk: Karnak Area (Forest)
+  Best Source:
+  - Wild Nakk: Karnak Area (Forest)
+  - Kuza Beast: Regole Area
+  Description: >
+    Deal non-elemental damage. Amount dealt is 
+    (Character Max HP - Current HP). Single-target.
+  FJF Recommended: Yes
+  Tags: >
+    question mark ? mysterious

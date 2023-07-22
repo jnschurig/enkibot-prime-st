@@ -1,9 +1,13 @@
 import streamlit as st
 import pandas as pd
+import os
 
 @st.cache_data
 def fetch_mix_data():
-    return pd.read_csv('mix_recipes.csv', keep_default_na=False)
+    # Need a non-relative path.
+    script_dir = os.path.dirname(__file__)
+    csv_path = os.path.join(script_dir, 'data', 'mix_recipes.csv')
+    return pd.read_csv(csv_path, keep_default_na=False)
 
 def format_mix_entry(mix_row):
     with st.container():

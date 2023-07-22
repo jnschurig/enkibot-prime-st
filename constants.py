@@ -63,3 +63,9 @@ This is a shameless ripoff of the original [Enkibot Prime](https://enkibot-prime
 which has been made using Python and Streamlit. Check out the [Github Repo](https://github.com/jnschurig/enkibot-prime-st). All data was ripped from the original app and 
 all credit goes to the original creators.
 '''
+
+SECTION_NAV_ANCHORS = {
+    'Post-Wind Shrine': 'World 1',
+    'World 2 Intro': 'World 2',
+    'Antlion': 'World 3',
+}

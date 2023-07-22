@@ -1,7 +1,8 @@
-import constants, general as gen, parse_hint_db as ph
 import streamlit as st
 import pandas as pd
 import os, json, random
+import constants, general as gen, parse_hint_db as ph
+from class_resources import blue_resources
 
 @st.cache_data
 def get_raw_data():
@@ -10,12 +11,18 @@ def get_raw_data():
 
 def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False):
     # Function to draw the section data.
-    # section_dict = section_data[1]
+
     new_section_list = json.loads(section_data['section_parts'])
 
     md_body = gen.class_match_sections(new_section_list, class_codes_list, debug=debug)
 
     if not simplified_display:
+        # Add world-specific section anchors.
+        if section_data['section_name'] in constants.SECTION_NAV_ANCHORS.keys():
+            anchor_text = constants.SECTION_NAV_ANCHORS[section_data['section_name']]
+            st.info(f'#### {anchor_text}')
+
+        # Draw Section
         with st.expander(section_data['section_name'], expanded=expanded_setting):
             st.markdown(md_body)
 
@@ -73,10 +80,16 @@ def go():
         #-----------------#
         # Class Resources #
         #-----------------#
+        # BLUE MAGE
+        if 'Blue-Mage' in class_selection:
+            with st.expander('Blue Resources'):
+                blue_resources.go(True)
+
+        # CHEMIST
         if 'Chemist' in class_selection:
             # We don't need to load this most of the time most likely,
             # so only do it when the chemist option is actually selected.
-            import mix_resources
+            from class_resources import mix_resources
             with st.expander('Chemist Resources'):
                 mix_resources.go()
 
@@ -116,12 +129,17 @@ def go():
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
     # Declare the page tabs
-    enki_main_tab, enki_sub_tab1, enki_sub_tab2 = st.tabs(['Enkibot', 'Raw Output', 'Changelog'])
+    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue Grimoire', 'Changelog'])
 
     #-------------------#
     # MAIN HINT SECTION #
     #-------------------#
     with enki_main_tab:
+        if show_original_md:
+            st.markdown('[World 1](#post-wind-shrine) | [World 2](#world-2-intro) | [World 3](#antlion)')
+        else:
+            st.markdown('[World 1](#world-1) | [World 2](#world-2) | [World 3](#world-3)')
+
         # Draw the sections
         full_body = ''
         for idx, section_row in hint_data.iterrows():
@@ -136,7 +154,7 @@ def go():
     #------------#
     # Raw Output #
     #------------#
-    with enki_sub_tab1:
+    with enki_raw_output_tab:
         if len(class_codes) > 0:
             file_classes = gen.format_class_list_as_str(class_codes, '_')
         elif debug:
@@ -152,15 +170,24 @@ def go():
         )
         st.code(full_body, language='markdown')
 
+    #---------------#
+    # Blue Grimoire #
+    #---------------#
+    with enki_blue_tab:
+        blue_resources.go(False)
+
     #-----------#
     # Changelog #
     #-----------#
-    with enki_sub_tab2:
+    with enki_changelog_tab:
         st.markdown('## Changelog')
 
         with open('changelog.md', 'r') as f:
             changelog_text = f.read()
         st.markdown(changelog_text)
+
+    # Footer URL to go back to the top.
+    st.markdown('[Top](#enkibot-prime-st)')
 
     return 
 
