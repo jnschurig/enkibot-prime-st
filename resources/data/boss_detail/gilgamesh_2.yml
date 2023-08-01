@@ -1,0 +1,10 @@
+Section:
+  Bridgamesh
+Bosses:
+  - Gilgamesh:
+      Level: 28
+      Vulnerable:
+        - Mute
+        - Slow
+      Description: >
+        The first REAL fight with Gilgy.

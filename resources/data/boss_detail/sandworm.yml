@@ -1,0 +1,9 @@
+Section:
+  Sandworm (Zerkersbane)
+Bosses:
+  - Sandworm:
+      Level: 18
+      Elemental Weaknesses:
+        - Water
+      Vulnerable:
+        - Slow

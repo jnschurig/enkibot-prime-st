@@ -1,0 +1,18 @@
+Section:
+  Boatamesh & Enkidu
+Bosses:
+  - Gilgamesh:
+      Level: 31
+      Vulnerable:
+        - Death
+        - Mute
+        - Slow
+      Description: >
+        Boats boats boats!
+  - Enkidu:
+      Level: 29
+      Vulnerable:
+        - Death
+        - Mute
+        - Not Heavy
+        - Slow

@@ -1,0 +1,9 @@
+Section:
+  Gogo
+Bosses:
+  - Gogo:
+      Level: 77
+      Elemental Weaknesses:
+        - Water
+      Vulnerable:
+        - Slow

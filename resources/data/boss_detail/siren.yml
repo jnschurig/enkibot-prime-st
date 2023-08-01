@@ -1,0 +1,16 @@
+Section:
+  Siren
+Bosses:
+  - Siren:
+      Level: 2
+      Vulnerable:
+        - Death
+        - Break
+        - Slow
+  - Undead Siren:
+      Level: 2
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Break
+        - Slow

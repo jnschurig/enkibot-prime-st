@@ -1,0 +1,7 @@
+Section:
+  Calofisteri
+Bosses:
+  - Calofisteri:
+      Level: 68
+      Vulnerable:
+        - Slow

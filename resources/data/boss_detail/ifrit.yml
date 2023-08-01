@@ -1,0 +1,13 @@
+Section:
+  Ifrit
+Bosses:
+  - Ifrit:
+      Level: 22
+      Elemental Weaknesses:
+        - Ice
+        - Water
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Slow

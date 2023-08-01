@@ -1,0 +1,8 @@
+Section:
+  Halicarnassus
+Bosses:
+  - Halicarnassus:
+      Level: 97
+      Vulnerable:
+        - Mute
+        - Slow

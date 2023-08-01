@@ -1,0 +1,15 @@
+Section:
+  Soul Cannon
+Bosses:
+  - Soul Cannon:
+      Level: 36
+      Elemental Weaknesses:
+        - Thunder
+      Vulnerable:
+        - Slow
+  - Launcher:
+      Level: 50
+      Elemental Weaknesses:
+        - Thunder
+      Vulnerable:
+        - Slow

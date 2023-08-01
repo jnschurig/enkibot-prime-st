@@ -1,0 +1,10 @@
+Section:
+  Abductor
+Bosses:
+  - Abductor:
+      Level: 29
+      Vulnerable:
+        - Break
+        - Mute
+        - Not Heavy
+        - Slow

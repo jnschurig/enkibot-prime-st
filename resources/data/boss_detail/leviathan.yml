@@ -1,0 +1,10 @@
+Section:
+  Leviathan
+Bosses:
+  - Leviathan:
+      Level: 37
+      Elemental Weaknesses:
+        - Thunder
+      Vulnerable:
+        - Mute
+        - Slow

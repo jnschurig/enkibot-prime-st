@@ -1,0 +1,13 @@
+Section:
+  Purobolos
+Bosses:
+  - Purobolos:
+      Level: 22
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+        - Slow
+        - Berserk

@@ -1,0 +1,8 @@
+Section:
+  Stokker
+Bosses:
+  - Stokker:
+      Level: 7
+      Vulnerable:
+        - Sleep
+        - Slow

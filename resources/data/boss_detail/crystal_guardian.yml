@@ -1,0 +1,9 @@
+Section:
+  Dragon Pod
+Bosses:
+  - Dragon Pod:
+      Level: 33
+      Vulnerable:
+        - Death
+        - Not Heavy
+        - Sleep

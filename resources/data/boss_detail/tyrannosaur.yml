@@ -1,0 +1,11 @@
+Section:
+  Regole
+Bosses:
+  - Tyrannosaur:
+      Level: 29
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Death
+        - Not Heavy
+        - Slow

@@ -1,0 +1,22 @@
+Section:
+  Bal/Drakenvale
+Bosses:
+  - Golem:
+      Level: null
+      Description: >
+        Don't hurt me!
+  - Bone Dragon:
+      Level: 37
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Break
+        - Mute
+        - Slow
+  - Zombie Dragon:
+      Level: 37
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Mute
+        - Slow

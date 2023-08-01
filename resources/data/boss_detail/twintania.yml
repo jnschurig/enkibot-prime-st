@@ -1,0 +1,22 @@
+Section:
+  Twintania
+Bosses:
+  - Twintania:
+      Level: 39
+      Elemental Weaknesses:
+        - Water
+        - Holy
+      Vulnerable:
+        - Mute
+        - Slow
+  - Twintania (Charging): 
+      Level: 30
+      Elemental Weaknesses:
+        - Water
+        - Holy
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Slow

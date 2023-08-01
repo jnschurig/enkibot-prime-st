@@ -1,0 +1,12 @@
+Section:
+  Antlion
+Bosses:
+  - Antlion:
+      Level: 34
+      Elemental Weaknesses:
+        - Water
+      Vulnerable:
+        - Mute
+        - Sleep
+        - Slow
+        - Berserk

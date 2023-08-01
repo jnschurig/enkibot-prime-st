@@ -1,0 +1,11 @@
+Section:
+  Manticore
+Bosses:
+  - Manticore:
+      Level: 19
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Slow

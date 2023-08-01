@@ -1,0 +1,21 @@
+Section:
+  Walse/Walse Tower
+Bosses:
+  - Shiva:
+      Level: 11
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Slow
+  - Ice Commander:
+      Level: 4
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+        - Slow
+        - Berserk

@@ -1,0 +1,12 @@
+Section:
+  World 2 Intro
+Bosses:
+  - Gilgamesh:
+      Level: 26
+      Vulnerable:
+        - Death
+        - Mute
+        - Not Heavy
+        - Slow
+      Description: >
+        Solo fight with Galuf.

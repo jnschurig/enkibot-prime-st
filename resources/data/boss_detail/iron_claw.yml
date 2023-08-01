@@ -1,0 +1,30 @@
+Section:
+  The Karnak 500
+Bosses:
+  - Sergeant:
+      Level: 0
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+        - Slow
+  - Cur Nakk:
+      Level: 19
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+        - Slow
+  - Iron Claw:
+      Level: 39
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+        - Slow
