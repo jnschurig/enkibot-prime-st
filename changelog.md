@@ -1,9 +1,11 @@
-#### 0.5.0 2023-07-31
+#### 0.5.0 2023-08-01
 
 - Updated the About text to be a little more clear and descriptive.
-- Added certain boss stats to relevant sections to help users have a better 
-  grasp of what options are available in each fight.
-- Full breakdown available in the a dedicated `Boss Compendium` tab.
+- Added certain boss stats (level, status vulnerabilities, and elemental weaknesses) 
+  to relevant sections to help users have a better grasp of what options are available 
+  in each fight.
+- Hover over Status and Element column names to see an icon legend.
+- Full boss breakdown available in the a dedicated `Boss Compendium` tab.
 
 #### 0.4.0 2023-07-22
 

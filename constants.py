@@ -61,9 +61,9 @@ ABOUT_TEXT = '''
 A [Four Job Fiesta](https://www.fourjobfiesta.com/) hint generator.
 
 This is a shameless ripoff of the original [Enkibot Prime](https://enkibot-prime.herokuapp.com/).
-This version was made using Python and Streamlit and has enriched content and functionality. 
-Check out the [Github Repo](https://github.com/jnschurig/enkibot-prime-st). All hint data was ripped 
-from the original app and all credit goes to the original creators.
+This version was made using Python and Streamlit and has additional content and functionality over 
+the original. Check out the [Github Repo](https://github.com/jnschurig/enkibot-prime-st). All hint 
+data was ripped from the original app and all credit goes to the original creators.
 '''
 
 SECTION_NAV_ANCHORS = {

@@ -1,7 +1,7 @@
 Section:
   Tree Exdeath
 Bosses:
-  - Tree Exdeath:
+  - Exdeath:
       Level: 77
       Vulnerable:
         - Slow
