@@ -1,0 +1,9 @@
+Section:
+  Karlabos
+Bosses:
+  - Karlabos:
+      Level: 5
+      Elemental Weaknesses:
+        - Thunder
+      Vulnerable:
+        - Slow

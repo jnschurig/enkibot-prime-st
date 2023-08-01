@@ -1,0 +1,18 @@
+Section:
+  Exdeath's Castle
+Bosses:
+  - Carbunkle:
+      Level: 44
+      Vulnerable:
+        - Mute
+        - Slow
+  - Carbunkle (No Shield):
+      Level: 1
+      Vulnerable:
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+        - Slow
+      Elemental Weaknesses:
+        - All

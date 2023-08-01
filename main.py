@@ -2,14 +2,14 @@ import streamlit as st
 import pandas as pd
 import os, json, random
 import constants, general as gen, parse_hint_db as ph
-from class_resources import blue_resources
+from resources import blue_resources, boss_resources
 
 @st.cache_data
 def get_raw_data():
     # The dataframe is cached to improve performance.
     return pd.DataFrame(ph.easy_df_parse())
 
-def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False):
+def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False, boss_row_df=None, boss_col_config_dict:dict=None):
     # Function to draw the section data.
 
     new_section_list = json.loads(section_data['section_parts'])
@@ -24,6 +24,16 @@ def format_section(section_data, class_codes_list:list=None, expanded_setting:bo
 
         # Draw Section
         with st.expander(section_data['section_name'], expanded=expanded_setting):
+            if boss_row_df is not None:
+                st.dataframe(
+                    boss_row_df, 
+                    column_config=boss_col_config_dict, 
+                    # disabled=True, 
+                    hide_index=True,
+                    use_container_width=True,
+                    # key='boss_detail_' + section_data['section_name']
+                )
+
             st.markdown(md_body)
 
     # Restore the body header sections...
@@ -89,7 +99,7 @@ def go():
         if 'Chemist' in class_selection:
             # We don't need to load this most of the time most likely,
             # so only do it when the chemist option is actually selected.
-            from class_resources import mix_resources
+            from resources import mix_resources
             with st.expander('Chemist Resources'):
                 mix_resources.go()
 
@@ -129,7 +139,13 @@ def go():
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
     # Declare the page tabs
-    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue Grimoire', 'Changelog'])
+    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_boss_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue Grimoire', 'Boss Compendium', 'Changelog'])
+
+    #-----------------#
+    # Boss Compendium #
+    #-----------------#
+    with enki_boss_tab:
+        boss_detail, boss_col_config = boss_resources.go()
 
     #-------------------#
     # MAIN HINT SECTION #
@@ -143,12 +159,19 @@ def go():
         # Draw the sections
         full_body = ''
         for idx, section_row in hint_data.iterrows():
+            boss_row = boss_detail[boss_detail['section_name'] == section_row['section_name']][['boss_name','boss_level','statuses','elements']]
+            
+            if len(boss_row.index) == 0:
+                boss_row = None
+
             full_body += format_section(
                 section_data=section_row, 
                 class_codes_list=class_codes, 
                 expanded_setting=expanded, 
                 debug=debug, 
                 simplified_display=show_original_md, 
+                boss_row_df=boss_row,
+                boss_col_config_dict=boss_col_config
             ) + '\n'
 
     #------------#

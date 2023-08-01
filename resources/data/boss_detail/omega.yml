@@ -1,0 +1,7 @@
+Section:
+  Omega
+Bosses:
+  - Omega:
+      Level: 119
+      Elemental Weaknesses:
+        - Thunder

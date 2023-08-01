@@ -1,0 +1,19 @@
+Section:
+  Melusine
+Bosses:
+  - Melusine (Before First Switch):
+      Level: 29
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Mute
+        - Sleep
+        - Slow
+  - Melusine (After First Switch):
+      Level: 33
+      Elemental Weaknesses:
+        - Random
+      Vulnerable:
+        - Mute
+        - Sleep
+        - Slow

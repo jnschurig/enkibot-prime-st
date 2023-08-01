@@ -1,0 +1,7 @@
+Section:
+  W2 Exdeath
+Bosses:
+  - Exdeath:
+      Level: 66
+      Elemental Weaknesses:
+        - Holy

@@ -1,0 +1,9 @@
+Section:
+  Sailing
+Bosses:
+  - Ramuh:
+      Level: 21
+      Vulnerable:
+        - Death
+        - Not Heavy
+        - Slow

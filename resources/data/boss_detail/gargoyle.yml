@@ -1,0 +1,12 @@
+Section:
+  The Great Pyramid
+Bosses:
+  - Gargoyle:
+      Level: 33
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Sleep
+        - Slow
+        - Berserk

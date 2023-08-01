@@ -1,0 +1,15 @@
+Section:
+  Wing Raptor
+Bosses:
+  - Wing Raptor:
+      Level: 1
+      Vulnerable:
+        - Mute
+        - Sleep
+        - Slow
+  - Wing Raptor (Wings Closed):
+      Level: 2
+      Vulnerable:
+        - Mute
+        - Sleep
+        - Slow

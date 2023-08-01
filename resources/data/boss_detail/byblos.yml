@@ -1,0 +1,10 @@
+Section:
+  Byblos
+Bosses:
+  - Byblos:
+      Level: 24
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Not Heavy
+        - Slow

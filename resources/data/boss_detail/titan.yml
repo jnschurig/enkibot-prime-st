@@ -1,0 +1,7 @@
+Section:
+  Titan
+Bosses:
+  - Titan:
+      Level: 1
+      Vulnerable:
+        - Slow

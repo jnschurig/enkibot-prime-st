@@ -1,0 +1,13 @@
+Section:
+  Castlemesh
+Bosses:
+  - Gilgamesh:
+      Level: 53
+      Vulnerable:
+        - Slow
+      Description: >
+        The battle for the poorest sword.
+  - Gilgamesh (Morphed):
+      Level: 67
+      Vulnerable:
+        - Slow

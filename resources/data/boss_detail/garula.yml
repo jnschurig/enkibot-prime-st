@@ -1,0 +1,12 @@
+Section:
+  Garula
+Bosses:
+  - Garula:
+      Level: 3
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Slow
+        - Blind

@@ -1,0 +1,13 @@
+Section:
+  Minotaur & Omniscient
+Bosses:
+  - Minotaur:
+      Level: 37
+  - Omniscient:
+      Level: 53
+      Elemental Weaknesses:
+        - Wind
+      Vulnerable:
+        - Mute
+        - Slow
+        - Berserk

@@ -1,0 +1,17 @@
+Section:
+  Necrophobe
+Bosses:
+  - Necrophobe:
+      Level: 66
+      Elemental Weaknesses:
+        - All
+      Vulnerable:
+        - Mute
+        - Slow
+  - Barriers:
+      Level: 44
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Slow

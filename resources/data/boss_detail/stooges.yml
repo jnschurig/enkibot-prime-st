@@ -1,0 +1,29 @@
+Section:
+  Three Stooges
+Bosses:
+  - Nereid (Purple):
+      Level: 20
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+  - Phobos (Green):
+      Level: 39
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+  - Triton (Red):
+      Level: 37
+      Elemental Weaknesses:
+        - Ice
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep

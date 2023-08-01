@@ -1,0 +1,11 @@
+Section:
+  Apanda
+Bosses:
+  - Apanda:
+      Level: 59
+      Elemental Weaknesses:
+        - Fire
+      Vulnerable:
+        - Mute
+        - Slow
+        - Berserk

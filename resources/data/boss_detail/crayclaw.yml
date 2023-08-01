@@ -1,0 +1,13 @@
+Section:
+  Crayclaw
+Bosses:
+  - Crayclaw:
+      Level: 43
+      Elemental Weaknesses:
+        - Thunder
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Sleep
+        - Slow

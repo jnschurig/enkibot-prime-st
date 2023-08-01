@@ -1,3 +1,10 @@
+#### 0.5.0 2023-07-31
+
+- Updated the About text to be a little more clear and descriptive.
+- Added certain boss stats to relevant sections to help users have a better 
+  grasp of what options are available in each fight.
+- Full breakdown available in the a dedicated `Boss Compendium` tab.
+
 #### 0.4.0 2023-07-22
 
 - Added world page anchors for quicker navigation to each world section (1, 2, and 3)
@@ -21,7 +28,7 @@
 
 #### 0.2.1 2023-07-11
 
-- Fixed a minor issue with filenames when no jobs/classes are selected.
+- Fixed a minor issue with export filenames when no jobs/classes are selected.
 
 #### 0.2.0 2023-07-11
 

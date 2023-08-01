@@ -1,0 +1,7 @@
+Section:
+  Catastrophe
+Bosses:
+  - Catastrophe:
+      Level: 71
+      Vulnerable:
+        - Slow

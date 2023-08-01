@@ -1,0 +1,19 @@
+Section:
+  Archaeoavis
+Bosses:
+  - 1st Form:
+      Level: 21
+      Elemental Weaknesses:
+        - Wind
+  - 2nd Form:
+      Level: 19
+      Vulnerable:
+        - Not Heavy
+  - 3rd Form:
+      Level: 23
+  - 4th Form:
+      Level: 24
+      Vulnerable:
+        - Not Heavy
+  - 5th Form:
+      Level: 20

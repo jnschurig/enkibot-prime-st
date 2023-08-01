@@ -1,0 +1,7 @@
+Section:
+  Atomos
+Bosses:
+  - Atomos:
+      Level: 41
+      Vulnerable:
+        - Slow

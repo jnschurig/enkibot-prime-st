@@ -1,0 +1,7 @@
+Section:
+  Azulmagia
+Bosses:
+  - Azulmagia:
+      Level: 57
+      Elemental Weaknesses:
+        - Poison

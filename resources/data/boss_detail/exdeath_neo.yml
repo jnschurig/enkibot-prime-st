@@ -1,0 +1,31 @@
+Section:
+  Neo Ex Cactuar
+Bosses:
+  - Grand Coif (Top Left):
+      Level: 83
+      Vulnerable:
+        - Slow
+        - Blind
+        - Stop
+  - Flexdeath (Front):
+      Level: 81
+      Vulnerable:
+        - Slow
+        - Blind
+        - Stop
+        - Mute
+  - Wizard Bones (Back):
+      Level: 86
+      Vulnerable:
+        - Slow
+        - Blind
+        - Stop
+        - Mute
+        - Not Heavy
+  - Al-majisti (Bottom Right):
+      Level: 67
+      Vulnerable:
+        - Break
+        - Blind
+        - Stop
+        - Mute

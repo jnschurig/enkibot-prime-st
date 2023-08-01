@@ -1,0 +1,8 @@
+Section:
+  Bahamut
+Bosses:
+  - Bahamut:
+      Level: 99
+      Vulnerable:
+        - Mute
+        - Slow

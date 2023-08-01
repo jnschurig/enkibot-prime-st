@@ -1,0 +1,13 @@
+Section:
+  Adamantoise
+Bosses:
+  - Adamantoise:
+      Level: 20
+      Elemental Weaknesses:
+        - Ice
+      Vulnerable:
+        - Death
+        - Mute
+        - Not Heavy
+        - Slow
+        - Berserk

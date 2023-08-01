@@ -1,0 +1,21 @@
+Section:
+  Liquid Flame
+Bosses:
+  - Body:
+      Level: 19
+      Elemental Weaknesses:
+        - Ice
+      Vulnerable:
+        - Death
+        - Not Heavy
+  - Hand:
+      Level: 19
+      Vulnerable:
+        - Death
+  - Tornado:
+      Level: 19
+      Elemental Weaknesses:
+        - Ice
+      Vulnerable:
+        - Death
+        - Not Heavy

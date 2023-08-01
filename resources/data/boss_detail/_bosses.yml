@@ -1,0 +1,63 @@
+bosses:
+  - abductor.yml
+  - adamantoise.yml
+  - antlion.yml
+  - apanda.yml
+  - archaeoavis.yml
+  - atomos.yml
+  - azulmagia.yml
+  - bahamut.yml
+  - byblos.yml
+  - calofisteri.yml
+  - carbunkle.yml
+  - catastrophe.yml
+  - catoblepas.yml
+  - crayclaw.yml
+  - crystal_guardian.yml
+  - dragon_pod.yml
+  - exdeath.yml
+  - exdeath_neo.yml
+  - exdeath_tree.yml
+  - gargoyle.yml
+  - garula.yml
+  - gilgamesh_1.yml
+  - gilgamesh_2.yml
+  - gilgamesh_3.yml
+  - gilgamesh_4.yml
+  - gogo.yml
+  - golem.yml
+  - halicarnassus.yml
+  - ifrit.yml
+  - iron_claw.yml
+  - karlabos.yml
+  - leviathan.yml
+  - liquid_flame.yml
+  - magissa.yml
+  - manticore.yml
+  - melusine.yml
+  - minotaur_and_omniscient.yml
+  - necrophobe.yml
+  - odin.yml
+  - omega.yml
+  - purobolos.yml
+  - ramuh.yml
+  - sandworm.yml
+  - shinryu.yml
+  - shiva.yml
+  - siren.yml
+  - soul_cannon.yml
+  - stokker.yml
+  - stooges.yml
+  - titan.yml
+  - twintania.yml
+  - tyrannosaur.yml
+  - wing_raptor.yml
+sources:
+  - Uncredited Career Day Discord Post: https://cdn.discordapp.com/attachments/532674851761029121/812446000589307950/unknown.png
+  - Final Fantasy Wiki: https://finalfantasy.fandom.com/wiki/Final_Fantasy_Wiki
+Notes:
+  - Berserk: >
+      Many bosses are vulnerable to Berserk. Some of which not be listed here as vulnerable 
+      because of a lack of usefulness or even the ability to get apply Berserk. If you find 
+      a boss that should have Berserk listed as a vulnerability, feel free to contact me and 
+      I will have it added.

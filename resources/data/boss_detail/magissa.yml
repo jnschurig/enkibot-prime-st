@@ -1,0 +1,15 @@
+Section:
+  Magissa + Forza
+Bosses:
+  - Magissa:
+      Level: 8
+      Vulnerable:
+        - Mute
+        - Not Heavy
+        - Slow
+  - Forza:
+      Level: 8
+      Vulnerable:
+        - Mute
+        - Sleep
+        - Slow

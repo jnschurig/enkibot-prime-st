@@ -1,0 +1,10 @@
+Section:
+  Odin
+Bosses:
+  - Odin:
+      Level: 2
+      Vulnerable:
+        - Break
+        - Mute
+        - Sleep
+        - Slow
