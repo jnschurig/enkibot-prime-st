@@ -1,15 +1,40 @@
 Section:
   Soul Cannon
 Bosses:
+  - Rocket Launcher:
+      Level: 23
+      HP: 2500
+      MP: 200
+      Elemental Weaknesses:
+        - Thunder
+      Vulnerable:
+        - Slow
+        - Stop
+  - Flame Thrower:
+      Level: 22
+      HP: 2400
+      MP: 125
+      Elemental Weaknesses:
+        - Thunder
+      Vulnerable:
+        - Slow
+        - Stop
   - Soul Cannon:
       Level: 36
+      HP: 22500
+      MP: 1000
       Elemental Weaknesses:
         - Thunder
       Vulnerable:
         - Slow
   - Launcher:
       Level: 50
+      HP: 10800
+      MP: 1000
       Elemental Weaknesses:
         - Thunder
       Vulnerable:
         - Slow
+      Bestiary:
+        - 260
+        - 261

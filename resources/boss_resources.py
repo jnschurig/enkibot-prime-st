@@ -200,7 +200,7 @@ if __name__ == '__main__':
             with legend_col2:
                 st.markdown('Statuses\n' + format_icon_legend('status'))
 
-    if st.checkbox('Show in Sidebar', value=True):
+    if st.checkbox('Show in Sidebar', value=False):
         with st.sidebar:
             go()
     else:

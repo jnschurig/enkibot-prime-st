@@ -1,3 +1,7 @@
+#### 0.5.1 2023-08-02
+
+- Added some updates to boss / required fight information.
+
 #### 0.5.0 2023-08-01
 
 - Updated the About text to be a little more clear and descriptive.
