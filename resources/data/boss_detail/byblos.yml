@@ -1,10 +1,15 @@
-Section:
-  Byblos
+Section: Byblos
+Order: 10
 Bosses:
   - Byblos:
       Level: 24
+      HP: 3600
+      MP: 1000
+      Types:
+        - Magic Beast
       Elemental Weaknesses:
         - Fire
       Vulnerable:
         - Not Heavy
         - Slow
+        # - Paralyze

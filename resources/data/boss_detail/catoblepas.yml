@@ -1,5 +1,11 @@
-Section:
-  Post-Submarine Questing
+Section: Post-Submarine Questing
+Order: 27
 Bosses:
   - Catoblepas:
       Level: 38
+      HP: 5000
+      MP: 500
+      Types:
+        - Magic Beast
+        - Dragon
+        - Heavy

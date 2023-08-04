@@ -1,8 +1,13 @@
-Section:
-  Gogo
+Section: Gogo
+Order: 40
 Bosses:
   - Gogo:
       Level: 77
+      HP: 47714
+      MP: 60000
+      Types:
+        - Heavy
+        - Humanoid
       Elemental Weaknesses:
         - Water
       Vulnerable:

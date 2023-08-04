@@ -1,6 +1,11 @@
-#### 0.5.1 2023-08-02
+#### 0.6.0 2023-08-04
 
-- Added some updates to boss / required fight information.
+- Renamed the `Boss Compendium` tab to `Bosses` in order to reduce tab crowding.
+- Renamed the `!Blue Grimoire` tab to `!Blue` in order to reduce tab crowding.
+- Minor corrections to many of the boss detail yaml files.
+- Additional detail added to stats (HP, MP, Types, and more Statuses)
+- Implemented a default order on the boss data to generally be in encounter order.
+- Minor code organization changes to support more kinds of data.
 
 #### 0.5.0 2023-08-01
 

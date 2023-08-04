@@ -1,9 +1,13 @@
-Section:
-  Karlabos
+Section: Karlabos
+Order: 2
 Bosses:
   - Karlabos:
       Level: 5
+      HP: 650
+      MP: 100
+      Types:
+        - Heavy
       Elemental Weaknesses:
-        - Thunder
+        - Lightning
       Vulnerable:
         - Slow

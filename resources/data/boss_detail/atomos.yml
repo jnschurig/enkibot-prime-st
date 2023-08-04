@@ -1,7 +1,12 @@
-Section:
-  Atomos
+Section: Atomos
+Order: 26
 Bosses:
   - Atomos:
       Level: 41
+      HP: 19997
+      MP: 10000
+      Types:
+        - Heavy
       Vulnerable:
         - Slow
+        - Sleep

@@ -16,8 +16,8 @@ SUPPORT,Dragon Power,Dragon Power,Dragon Fang + Potion,Dragon Fang + Hi-Potion,R
 SUPPORT,Resist Poison,Resist Poison,Ether + Antidote,"",Makes target immune to Poison status.,elemental,0
 SUPPORT,Resist Fire,Resist Fire,Ether + Eyedrop,"",Makes target absorb Fire damage,elemental,0
 SUPPORT,Resist Ice,Resist Ice,Phoenix Down + Antidote,"",Makes target absorb Ice damage,elemental,0
-SUPPORT,Resist Thunder,Resist Thunder,Phoenix Down + Eyedrop,"",Makes target absorb Thunder damage,elemental,0
-SUPPORT,Dragon Shield,Dragon Shielding,Ether + Dragon Fang,"","Makes target immune to Fire, Ice and Thunder damage",elemental,0
+SUPPORT,Resist Lightning,Resist Lightning,Phoenix Down + Eyedrop,"",Makes target absorb Lightning damage,elemental,0
+SUPPORT,Dragon Shield,Dragon Shielding,Ether + Dragon Fang,"","Makes target immune to Fire, Ice and Lightning damage",elemental,0
 SUPPORT,Dragon Armor,Dragon Defense,Phoenix Down + Dragon Fang,"","Grants Protect, Shell, Reflect and Regen","",1
 SUPPORT,Life Shield,Lifeshield,Phoenix Down + Holy Water,"",Makes target immune to instant death attacks,"",1
 SUPPORT,Kiss of Blessing,Blessed Kiss,Maiden's Kiss + Holy Water,"","Grants Berserk, Haste, and Blink status","",1
@@ -44,6 +44,6 @@ OFFENSE,Failure,Dud Potion,Holy Water + Dark Matter,"",Poisons target,"",0
 OFFENSE,Explosive,TNT,Turtle Shell + Dark Matter,"","Deals damage equal to caster's current HP, kills caster",hit points,0
 OFFENSE,Poison,Poison,Antidote + Dark Matter,"",Poisons target,"",0
 OFFENSE,Poison Breath,Poison Breath,Antidote + Dragon Fang,"",Deals Poison damage equal to half of caster's current HP.,hit points,0
-OFFENSE,Dragon Breath,Dragon Breath,Dragon Fang + Dragon Fang,"","Deals Fire, Ice and Thunder damage equal to caster's current HP.",hit points elemental,0
+OFFENSE,Dragon Breath,Dragon Breath,Dragon Fang + Dragon Fang,"","Deals Fire, Ice and Lightning damage equal to caster's current HP.",hit points elemental,0
 OFFENSE,Dark Breath,Dark Breath,Dragon Fang + Dark Matter,"",Deals damage equal to caster's max HP - current HP,hit points,0
 OFFENSE,Shadow Flare,Shadowflare,Dark Matter + Dark Matter,"",Spell power 240. Ignores 97% of target's Magic Defense. Causes Sap.,hit points nuke,1

@@ -1,15 +1,33 @@
-Section:
-  Wing Raptor
+Section: Wing Raptor
+Order: 1
 Bosses:
   - Wing Raptor:
       Level: 1
-      Vulnerable:
-        - Mute
-        - Sleep
-        - Slow
-  - Wing Raptor (Wings Closed):
+      HP: 250
+      MP: 25
+      Types:
+        - Heavy
+      # Vulnerable:
+      #   - Mute
+      #   - Sleep
+      #   - Slow
+      #   - Blind
+      #   - Stop
+      #   - Paralyze
+      #   - Confuse
+      #   - Berserk
+  - Wing Raptor (Closed):
       Level: 2
-      Vulnerable:
-        - Mute
-        - Sleep
-        - Slow
+      HP: 250
+      MP: 0
+      Types:
+        - Heavy
+      # Vulnerable:
+      #   - Mute
+      #   - Sleep
+      #   - Slow
+      #   - Blind
+      #   - Stop
+      #   - Paralyze
+      #   - Confuse
+      #   - Berserk

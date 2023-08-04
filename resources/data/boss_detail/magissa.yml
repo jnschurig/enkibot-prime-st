@@ -1,15 +1,25 @@
-Section:
-  Magissa + Forza
+Section: Magissa + Forza
+Order: 4
 Bosses:
   - Magissa:
       Level: 8
+      HP: 650
+      MP: 200
+      Types:
+        - Humanoid
       Vulnerable:
         - Mute
         - Not Heavy
         - Slow
   - Forza:
       Level: 8
+      HP: 850
+      MP: 100
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Mute
         - Sleep
         - Slow
+        - Blind

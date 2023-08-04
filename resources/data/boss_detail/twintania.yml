@@ -1,8 +1,13 @@
-Section:
-  Twintania
+Section: Twintania
+Order: 56
 Bosses:
   - Twintania:
       Level: 39
+      HP: 50000
+      MP: 10000
+      Types:
+        - Magic Beast
+        - Heavy
       Elemental Weaknesses:
         - Water
         - Holy
@@ -11,6 +16,10 @@ Bosses:
         - Slow
   - Twintania (Charging): 
       Level: 30
+      HP: 50000
+      MP: 10000
+      Types:
+        - Magic Beast
       Elemental Weaknesses:
         - Water
         - Holy
@@ -20,3 +29,6 @@ Bosses:
         - Mute
         - Not Heavy
         - Slow
+        - Toad
+      Description: >
+        Common Steal of Titan's Axe could be worthwhile.

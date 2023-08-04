@@ -1,7 +1,14 @@
-Section:
-  W2 Exdeath
+Section: W2 Exdeath
+Order: 31
 Bosses:
   - Exdeath:
       Level: 66
+      HP: 32768
+      MP: 32768
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - Holy
+      Vulnerable:
+        - Slow
+      

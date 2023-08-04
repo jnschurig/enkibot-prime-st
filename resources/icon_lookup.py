@@ -9,19 +9,31 @@ STATUSES = {
   'Confuse': '💫',
   'Blind': '🕶️',
   'Stop': '🛑',
+  'Paralyze': '♿',
+  'Toad': '🐸',
+  # 'Mini': '🐭',
+  # 'Mini': '🐛',
 }
 
 ELEMENTS = {
     'Ice': '❄️',
     'Fire': '🔥',
-    # 'Bolt': '⚡',
-    'Thunder': '⚡',
+    'Lightning': '⚡',
     'Water': '💧',
     'Wind': '🍃',
     'Earth': '⛰️',
-#   'Poison': '🫧', # I prefer this one, but it doesn't display correctly :(
-    'Poison': '☠️',
+    'Poison': '🫧',
+    # 'Poison': '☠️', # An alternative to bubbles
     'Holy': '✨',
     'All': '🌈',
     'Random': '🎲',
+}
+
+TYPES = {
+    'Heavy': '🚛',
+    'Humanoid': '👤', # 🧑🚶
+    'Undead': '🧟',
+    'Dragon': '🐲',
+    'Magic Beast': '🦄',
+    'Desert': '🌵',
 }

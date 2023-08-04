@@ -1,13 +1,20 @@
-Section:
-  Exdeath's Castle
+Section: Exdeath's Castle
+Order: 29
 Bosses:
   - Carbunkle:
       Level: 44
+      HP: 15000
+      MP: 10000
+      Types:
+        - Magic Beast
+        - Heavy
       Vulnerable:
         - Mute
         - Slow
   - Carbunkle (No Shield):
       Level: 1
+      HP: 15000
+      MP: 1000
       Vulnerable:
         - Break
         - Mute

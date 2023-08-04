@@ -1,8 +1,10 @@
-Section:
-  Abductor
+Section: Abductor
+Order: 23
 Bosses:
   - Abductor:
       Level: 29
+      HP: 1500
+      MP: 2000
       Vulnerable:
         - Break
         - Mute

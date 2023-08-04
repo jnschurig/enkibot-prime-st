@@ -1,7 +1,12 @@
-Section:
-  Catastrophe
+Section: Catastrophe
+Order: 54
 Bosses:
   - Catastrophe:
       Level: 71
+      HP: 19997
+      MP: 19997
+      Types:
+        - Heavy
       Vulnerable:
         - Slow
+        - Blind

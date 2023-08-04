@@ -1,8 +1,12 @@
-Section:
-  Garula
+Section: Garula
+Order: 6
 Bosses:
   - Garula:
       Level: 3
+      HP: 1200
+      MP: 100
+      Types:
+        - Magic Beast
       Vulnerable:
         - Death
         - Break

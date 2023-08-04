@@ -1,10 +1,16 @@
-Section:
-  Leviathan
+Section: Leviathan
+Order: 38
 Bosses:
   - Leviathan:
       Level: 37
+      HP: 40000
+      MP: 2000
+      Types:
+        - Dragon
+        - Heavy
       Elemental Weaknesses:
-        - Thunder
+        - Lightning
       Vulnerable:
         - Mute
         - Slow
+        - Blind

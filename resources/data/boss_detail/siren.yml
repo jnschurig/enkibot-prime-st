@@ -1,14 +1,25 @@
-Section:
-  Siren
+Section: Siren
+Order: 3
 Bosses:
   - Siren:
       Level: 2
+      HP: 900
+      MP: 200
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Death
         - Break
         - Slow
   - Undead Siren:
       Level: 2
+      HP: 900
+      MP: 200
+      Types:
+        - Heavy
+        - Humanoid
+        - Undead
       Elemental Weaknesses:
         - Fire
       Vulnerable:

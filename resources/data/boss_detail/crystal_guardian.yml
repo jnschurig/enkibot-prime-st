@@ -1,9 +1,13 @@
-Section:
-  Dragon Pod
+Section: Seal Crystals/Guardians
+Order: 28
+Section Index: null
 Bosses:
-  - Dragon Pod:
-      Level: 33
+  - Crystal:
+      Level: 77
+      HP: 7777
+      MP: 10000
       Vulnerable:
         - Death
         - Not Heavy
         - Sleep
+        - Blind

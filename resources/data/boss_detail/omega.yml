@@ -1,7 +1,14 @@
-Section:
-  Omega
+Section: Omega
+Order: 51
 Bosses:
   - Omega:
       Level: 119
+      HP: 55530
+      MP: 60700
+      Types:
+        - Heavy
       Elemental Weaknesses:
-        - Thunder
+        - Lightning
+      Vulnerable:
+        - Stop
+        - Slow
