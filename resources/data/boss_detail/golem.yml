@@ -1,12 +1,20 @@
-Section:
-  Bal/Drakenvale
+Section: Bal/Drakenvale
+Order: 23
 Bosses:
   - Golem:
-      Level: null
+      Level: 3
+      HP: 2500
+      MP: 1000
       Description: >
         Don't hurt me!
   - Bone Dragon:
       Level: 37
+      HP: 3000
+      MP: 500
+      Types:
+        - Undead
+        - Dragon
+        - Heavy
       Elemental Weaknesses:
         - Fire
       Vulnerable:
@@ -15,6 +23,12 @@ Bosses:
         - Slow
   - Zombie Dragon:
       Level: 37
+      HP: 4000
+      MP: 1000
+      Types:
+        - Undead
+        - Dragon
+        - Heavy
       Elemental Weaknesses:
         - Fire
       Vulnerable:

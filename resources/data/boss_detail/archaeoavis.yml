@@ -1,19 +1,35 @@
-Section:
-  Archaeoavis
+Section: Archaeoavis
+Order: 16
 Bosses:
   - 1st Form:
       Level: 21
+      HP: 1600
+      MP: 2000
+      Types: 
+        - Heavy
       Elemental Weaknesses:
         - Wind
   - 2nd Form:
       Level: 19
+      HP: 1600
+      MP: 2000
       Vulnerable:
         - Not Heavy
   - 3rd Form:
       Level: 23
+      HP: 1600
+      MP: 2000
+      Types:
+        - Heavy
   - 4th Form:
       Level: 24
+      HP: 1600
+      MP: 2000
       Vulnerable:
         - Not Heavy
-  - 5th Form:
+  - Revived:
       Level: 20
+      HP: 2500
+      MP: 2000
+      Types:
+        - Heavy

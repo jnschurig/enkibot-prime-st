@@ -1,8 +1,12 @@
-Section:
-  Three Stooges
+Section: Three Stooges
+Order: 37
 Bosses:
   - Nereid (Purple):
       Level: 20
+      HP: 13333
+      MP: 10000
+      Types:
+        - Undead
       Vulnerable:
         - Death
         - Break
@@ -11,6 +15,10 @@ Bosses:
         - Sleep
   - Phobos (Green):
       Level: 39
+      HP: 13333
+      MP: 10000
+      Types:
+        - Undead
       Vulnerable:
         - Death
         - Break
@@ -19,6 +27,10 @@ Bosses:
         - Sleep
   - Triton (Red):
       Level: 37
+      HP: 13333
+      MP: 10000
+      Types:
+        - Undead
       Elemental Weaknesses:
         - Ice
       Vulnerable:

@@ -1,8 +1,13 @@
-Section:
-  Bridgamesh
+Section: Bridgamesh
+Order: 21
 Bosses:
   - Gilgamesh:
       Level: 28
+      HP: 6500
+      MP: 1000
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Mute
         - Slow

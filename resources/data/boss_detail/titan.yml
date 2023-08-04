@@ -1,7 +1,13 @@
-Section:
-  Titan
+Section: Titan
+Order: 18
 Bosses:
   - Titan:
       Level: 1
+      HP: 2500
+      MP: 2000
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Slow
+        - Stop

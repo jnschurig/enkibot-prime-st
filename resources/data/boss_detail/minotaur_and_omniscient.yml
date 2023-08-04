@@ -1,13 +1,25 @@
-Section:
-  Minotaur & Omniscient
+Section: Minotaur & Omniscient
+Order: 36
 Bosses:
   - Minotaur:
       Level: 37
+      HP: 19850
+      MP: 0
+      Types:
+        - Heavy
+        - Humanoid
   - Omniscient:
       Level: 53
+      HP: 16999
+      MP: 30000
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - Wind
       Vulnerable:
         - Mute
         - Slow
         - Berserk
+      Description: >
+        Omniscient starts with weak magic and switches to 
+        include stronger -aga magic after HP gets below 4000. 

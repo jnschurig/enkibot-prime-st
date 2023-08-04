@@ -1,9 +1,15 @@
-Section:
-  Sailing
+Section: Sailing
+Order: 11
 Bosses:
   - Ramuh:
       Level: 21
+      HP: 4000
+      MP: 300
+      Types:
+        - Humanoid
       Vulnerable:
         - Death
         - Not Heavy
         - Slow
+        - Blind
+        - Berserk

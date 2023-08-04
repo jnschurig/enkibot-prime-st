@@ -1,19 +1,34 @@
-Section:
-  Melusine
+Section: Melusine
+Order: 34
 Bosses:
-  - Melusine (Before First Switch):
+  - Melusine (Battle Start):
       Level: 29
+      HP: 20000
+      MP: 500
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - Fire
       Vulnerable:
         - Mute
         - Sleep
         - Slow
-  - Melusine (After First Switch):
-      Level: 33
+        - Stop
+        - Confuse
+  - Melusine (Post Switch):
+      Level: 29
+      HP: 20000
+      MP: 500
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - Random
       Vulnerable:
         - Mute
         - Sleep
         - Slow
+        - Stop
+        - Confuse
+      Description: >
+        Weakness is random between Fire, Ice, and Lightning, 
+        or a form that absorbs all three.

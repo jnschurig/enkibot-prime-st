@@ -1,14 +1,23 @@
-Section:
-  Neo Ex Cactuar
+Section: Neo Ex Cactuar
+Order: 71
 Bosses:
   - Grand Coif (Top Left):
       Level: 83
+      HP: 55000
+      MP: 65000
+      Types:
+        - Dragon
+        - Heavy
       Vulnerable:
         - Slow
         - Blind
         - Stop
   - Flexdeath (Front):
       Level: 81
+      HP: 50000
+      MP: 65000
+      Types:
+        - Heavy
       Vulnerable:
         - Slow
         - Blind
@@ -16,6 +25,10 @@ Bosses:
         - Mute
   - Wizard Bones (Back):
       Level: 86
+      HP: 60000
+      MP: 65000
+      Types:
+        - Humanoid
       Vulnerable:
         - Slow
         - Blind
@@ -24,6 +37,11 @@ Bosses:
         - Not Heavy
   - Al-majisti (Bottom Right):
       Level: 67
+      HP: 55000
+      MP: 65000
+      Types:
+        - Magic Beast
+        - Heavy
       Vulnerable:
         - Break
         - Blind

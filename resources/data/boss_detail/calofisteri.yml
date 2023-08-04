@@ -1,7 +1,14 @@
-Section:
-  Calofisteri
+Section: Calofisteri
+Order: 50
 Bosses:
   - Calofisteri:
       Level: 68
+      HP: 18000
+      MP: 1000
+      Types:
+        - Magic Beast
+        - Humanoid
+        - Heavy
       Vulnerable:
         - Slow
+        - Blind

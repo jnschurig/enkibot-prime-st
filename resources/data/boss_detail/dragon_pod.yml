@@ -1,9 +1,28 @@
-Section:
-  Dragon Pod
+Section: Dragon Pod
+Order: 24
 Bosses:
   - Dragon Pod:
       Level: 33
+      HP: 12000
+      MP: 1000
+      Types:
+        - Humanoid
       Vulnerable:
         - Death
         - Not Heavy
         - Sleep
+  - Dragon Flowers:
+      Level: null
+      HP: 100
+      MP: 1000
+      Vulnerable:
+        - Death
+        - Break
+        - Mute
+        - Not Heavy
+        - Sleep
+        - Slow
+        - Berserk
+        - Confuse
+        - Blind
+        - Stop

@@ -1,21 +1,40 @@
-Section:
-  Liquid Flame
+Section: Liquid Flame
+Order: 7
 Bosses:
   - Body:
       Level: 19
+      HP: 3000
+      MP: 100
       Elemental Weaknesses:
         - Ice
       Vulnerable:
         - Death
         - Not Heavy
+        - Confuse
   - Hand:
       Level: 19
+      HP: 3000
+      MP: 30
+      Types:
+        - Heavy
       Vulnerable:
         - Death
+        - Confuse
+      # Elemental Immunities:
+      #   - Ice
+      #   - Lightning
+      #   - Water
+      #   - Earth
+      #   - Holy
   - Tornado:
       Level: 19
+      HP: 3000
+      MP: 50
       Elemental Weaknesses:
         - Ice
       Vulnerable:
         - Death
         - Not Heavy
+        - Confuse
+      # Elemental Immunities:
+      #   - Water

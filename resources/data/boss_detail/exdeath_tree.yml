@@ -1,7 +1,12 @@
-Section:
-  Tree Exdeath
+Section: Tree Exdeath
+Order: 70
 Bosses:
   - Exdeath:
       Level: 77
+      HP: 49001
+      MP: 30000
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Slow

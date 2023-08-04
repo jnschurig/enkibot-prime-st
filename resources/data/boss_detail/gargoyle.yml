@@ -1,8 +1,13 @@
-Section:
-  The Great Pyramid
+Section: The Great Pyramid
+Order: 33
 Bosses:
   - Gargoyle:
       Level: 33
+      HP: 5000
+      MP: 300
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Death
         - Break
@@ -10,3 +15,4 @@ Bosses:
         - Sleep
         - Slow
         - Berserk
+        - Blind

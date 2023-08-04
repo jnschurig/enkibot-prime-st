@@ -139,13 +139,15 @@ def go():
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
     # Declare the page tabs
-    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_boss_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue Grimoire', 'Boss Compendium', 'Changelog'])
+    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_boss_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue', 'Bosses', 'Changelog'])
 
-    #-----------------#
-    # Boss Compendium #
-    #-----------------#
+    #--------#
+    # Bosses #
+    #--------#
     with enki_boss_tab:
         boss_detail, boss_col_config = boss_resources.go()
+        sectional_col_list = list(boss_col_config.keys())#.remove('section_name')
+        sectional_col_list.remove('section_name')
 
     #-------------------#
     # MAIN HINT SECTION #
@@ -159,7 +161,8 @@ def go():
         # Draw the sections
         full_body = ''
         for idx, section_row in hint_data.iterrows():
-            boss_row = boss_detail[boss_detail['section_name'] == section_row['section_name']][['boss_name','boss_level','statuses','elements']]
+            boss_row = boss_detail[boss_detail['section_name'] == section_row['section_name']][sectional_col_list]
+            # boss_row = boss_row[sectional_col_list]
             
             if len(boss_row.index) == 0:
                 boss_row = None

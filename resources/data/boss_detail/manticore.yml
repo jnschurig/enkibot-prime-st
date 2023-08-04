@@ -1,11 +1,16 @@
-Section:
-  Manticore
+Section: Manticore
+Order: 19
 Bosses:
   - Manticore:
       Level: 19
+      HP: 3300
+      MP: 1000
+      Types:
+        - Magic Beast
       Vulnerable:
         - Death
         - Break
         - Mute
         - Not Heavy
         - Slow
+        - Stop
