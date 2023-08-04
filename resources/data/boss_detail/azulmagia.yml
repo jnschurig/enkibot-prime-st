@@ -1,7 +1,13 @@
-Section:
-  Azulmagia
+Section: Azulmagia
+Order: 53
 Bosses:
   - Azulmagia:
       Level: 57
+      HP: 27900
+      MP: 50000
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - Poison
+      Vulnerable:
+        - Blind

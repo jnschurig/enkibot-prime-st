@@ -1,8 +1,12 @@
-Section:
-  Boatamesh & Enkidu
+Section: Boatamesh & Enkidu
+Order: 25
 Bosses:
   - Gilgamesh:
       Level: 31
+      HP: 8888
+      MP: 888
+      Types:
+        - Humanoid
       Vulnerable:
         - Death
         - Mute
@@ -11,6 +15,10 @@ Bosses:
         Boats boats boats!
   - Enkidu:
       Level: 29
+      HP: 4000
+      MP: 1000
+      Types:
+        - Humanoid
       Vulnerable:
         - Death
         - Mute

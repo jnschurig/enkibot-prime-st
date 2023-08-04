@@ -1,8 +1,15 @@
-Section:
-  Shinryu
+Section: Shinryu
+Order: 58
 Bosses:
   - Shinryu:
       Level: 97
+      HP: 55500
+      MP: 51000
+      Types:
+        - Dragon
+        - Heavy
       Vulnerable:
         - Mute
+        - Slow
+        - Blind
         - Berserk

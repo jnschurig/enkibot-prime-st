@@ -1,13 +1,23 @@
-Section:
-  Castlemesh
+Section: Castlemesh
+Order: 30
 Bosses:
   - Gilgamesh:
       Level: 53
+      HP: 55000
+      MP: 2000
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Slow
       Description: >
         The battle for the poorest sword.
   - Gilgamesh (Morphed):
       Level: 67
+      HP: 60000
+      MP: 9000
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Slow

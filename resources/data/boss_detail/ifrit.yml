@@ -1,8 +1,12 @@
-Section:
-  Ifrit
+Section: Ifrit
+Order: 9
 Bosses:
   - Ifrit:
       Level: 22
+      HP: 3000
+      MP: 1000
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - Ice
         - Water
@@ -11,3 +15,6 @@ Bosses:
         - Break
         - Mute
         - Slow
+        - Blind
+        - Confuse
+        - Stop

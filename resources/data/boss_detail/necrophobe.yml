@@ -1,15 +1,29 @@
-Section:
-  Necrophobe
+Section: Necrophobe
+Order: 59
 Bosses:
   - Necrophobe:
       Level: 66
+      HP: 44044
+      MP: 10000
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - All
       Vulnerable:
         - Mute
         - Slow
+        - Blind
+      Description: >
+        If Gilgamesh was fought in Castle Exdeath at the end of World 2, 
+        Necrophobe only needs to be brought to < 10000 HP. Then a cutscene 
+        will play and the fight will end in victory. Also consider stealing 
+        the Genji Armor from Gilgamesh during the cutscene. 
   - Barriers:
       Level: 44
+      HP: 8800
+      MP: 300
+      Type:
+        - Heavy
       Vulnerable:
         - Death
         - Break

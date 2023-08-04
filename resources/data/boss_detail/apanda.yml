@@ -1,11 +1,17 @@
-Section:
-  Apanda
+Section: Apanda
+Order: 52
 Bosses:
   - Apanda:
       Level: 59
+      HP: 22200
+      MP: 1000
+      Types:
+        - Magic Beast
+        - Heavy
       Elemental Weaknesses:
         - Fire
       Vulnerable:
         - Mute
         - Slow
         - Berserk
+        - Blind

@@ -1,14 +1,23 @@
-Section:
-  Walse/Walse Tower
+Section: Walse/Walse Tower
+Order: 5
 Bosses:
   - Shiva:
       Level: 11
+      HP: 1500
+      MP: 1000
+      Types:
+        - Heavy
+        - Humanoid
       Elemental Weaknesses:
         - Fire
       Vulnerable:
         - Slow
   - Ice Commander:
       Level: 4
+      HP: 600
+      MP: 200
+      Types:
+        - Humanoid
       Elemental Weaknesses:
         - Fire
       Vulnerable:

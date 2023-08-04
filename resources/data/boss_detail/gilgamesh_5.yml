@@ -1,0 +1,15 @@
+Section: The Void
+Order: 57
+Bosses:
+  - Gilgamesh:
+      Level: 59
+      HP: 7000
+      MP: 0
+      Types:
+        - Heavy
+        - Humanoid
+      Vulnerable:
+        - Slow
+      Description: >
+        True HP is 37000, but after 7000 damage he will stop attacking, talk 
+        for a while, and walk away. Steal a Genji Shield.

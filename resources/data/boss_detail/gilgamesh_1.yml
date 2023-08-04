@@ -1,8 +1,10 @@
-Section:
-  World 2 Intro
+Section: World 2 Intro
+Order: 20
 Bosses:
   - Gilgamesh:
       Level: 26
+      HP: 1500
+      MP: 2000
       Vulnerable:
         - Death
         - Mute

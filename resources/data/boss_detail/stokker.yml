@@ -1,8 +1,12 @@
-Section:
-  Stokker
+Section: Stokker
+Order: 35
 Bosses:
   - Stokker:
       Level: 7
+      HP: 20000
+      MP: 8192
+      Types:
+        - Heavy
       Vulnerable:
         - Sleep
         - Slow

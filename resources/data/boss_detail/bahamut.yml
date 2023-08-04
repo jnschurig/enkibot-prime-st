@@ -1,8 +1,13 @@
-Section:
-  Bahamut
+Section: Bahamut
+Order: 40
 Bosses:
   - Bahamut:
       Level: 99
+      HP: 40000
+      MP: 10000
+      Types:
+        - Heavy
       Vulnerable:
         - Mute
         - Slow
+        - Blind

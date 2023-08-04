@@ -1,10 +1,17 @@
-Section:
-  Odin
+Section: Odin
+Order: 40
 Bosses:
   - Odin:
       Level: 2
+      HP: 17000
+      MP: 500
+      Types:
+        - Heavy
+        - Humanoid
       Vulnerable:
         - Break
         - Mute
         - Sleep
         - Slow
+        - Blind
+        - Berserk

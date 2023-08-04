@@ -1,8 +1,12 @@
-Section:
-  Antlion
+Section: Antlion
+Order: 32
 Bosses:
   - Antlion:
       Level: 34
+      HP: 8100
+      MP: 1000
+      Types:
+        - Heavy
       Elemental Weaknesses:
         - Water
       Vulnerable:
@@ -10,3 +14,4 @@ Bosses:
         - Sleep
         - Slow
         - Berserk
+        - Blind

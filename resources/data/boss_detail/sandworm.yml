@@ -1,8 +1,13 @@
-Section:
-  Sandworm (Zerkersbane)
+Section: Sandworm (Zerkersbane)
+Order: 12
 Bosses:
   - Sandworm:
       Level: 18
+      HP: 3000
+      MP: 10125
+      Types:
+        - Heavy
+        - Desert
       Elemental Weaknesses:
         - Water
       Vulnerable:

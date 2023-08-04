@@ -1,8 +1,10 @@
-Section:
-  Adamantoise
+Section: Adamantoise
+Order: 14
 Bosses:
   - Adamantoise:
       Level: 20
+      HP: 2000
+      MP: 125
       Elemental Weaknesses:
         - Ice
       Vulnerable:

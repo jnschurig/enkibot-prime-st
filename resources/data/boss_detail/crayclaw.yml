@@ -1,13 +1,21 @@
-Section:
-  Crayclaw
+Section: Crayclaw
+Order: 13
 Bosses:
   - Crayclaw:
       Level: 43
+      HP: 2000
+      MP: 500
+      Types:
+        - Magic Beast
+        - Heavy
       Elemental Weaknesses:
-        - Thunder
+        - Lightning
       Vulnerable:
         - Death
         - Break
         - Mute
         - Sleep
         - Slow
+        - Stop
+        - Confuse
+        # - Paralyze

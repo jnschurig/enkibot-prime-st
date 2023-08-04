@@ -1,8 +1,10 @@
-Section:
-  Purobolos
+Section: Purobolos
+Order: 17
 Bosses:
   - Purobolos:
       Level: 22
+      HP: 1500
+      MP: 100
       Vulnerable:
         - Death
         - Break
@@ -11,3 +13,4 @@ Bosses:
         - Sleep
         - Slow
         - Berserk
+        - Stop

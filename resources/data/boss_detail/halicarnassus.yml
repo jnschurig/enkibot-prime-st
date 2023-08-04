@@ -1,8 +1,13 @@
-Section:
-  Halicarnassus
+Section: Halicarnassus
+Order: 55
 Bosses:
   - Halicarnassus:
       Level: 97
+      HP: 33333
+      MP: 5000
+      Types:
+        - Heavy
       Vulnerable:
         - Mute
         - Slow
+        - Blind

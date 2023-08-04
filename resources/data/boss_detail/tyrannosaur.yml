@@ -1,8 +1,13 @@
-Section:
-  Regole
+Section: Regole
+Order: 22
 Bosses:
   - Tyrannosaur:
       Level: 29
+      HP: 5000
+      MP: 1000
+      Types:
+        - Undead
+        - Dragon
       Elemental Weaknesses:
         - Fire
       Vulnerable:
