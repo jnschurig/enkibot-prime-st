@@ -52,7 +52,7 @@ def go():
         st.title('Enkibot Prime ST')
 
     with header_col2:
-        st.image(os.path.join('images', 'enkidu.png'), width=50)
+        st.image(os.path.join('images', 'enkidu_no_shadow.png'), width=64)
 
     #---------#
     # Sidebar #
