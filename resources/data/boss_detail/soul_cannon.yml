@@ -35,8 +35,6 @@ Bosses:
       MP: 1000
       Types:
         - Heavy
-      Elemental Weaknesses:
-        - Lightning
       Vulnerable:
         - Slow
         - Stop
