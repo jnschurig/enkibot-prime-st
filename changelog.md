@@ -1,3 +1,11 @@
+#### 1.0.0 2023-08-28
+
+- Added extra usable sections in each expander.
+- Added Big Bridge encounter chart in the Bridgamesh section.
+- Improved the code layout as relating to !Mix resources.
+- Checking the Debug box will enable !Blue and !Mix resources.
+- Added more detail to the README.
+
 #### 0.6.0 2023-08-04
 
 - Renamed the `Boss Compendium` tab to `Bosses` in order to reduce tab crowding.
