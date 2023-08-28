@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os, json, random
 import constants, general as gen, parse_hint_db as ph
-from resources import blue_resources, boss_resources
+from resources import blue_resources, boss_resources, mix_resources
 
 @st.cache_data
 def get_raw_data():
@@ -34,7 +34,22 @@ def format_section(section_data, class_codes_list:list=None, expanded_setting:bo
                     # key='boss_detail_' + section_data['section_name']
                 )
 
-            st.markdown(md_body)
+            # Create placeholder columns.
+            md_col, subsection = st.columns([100, 1])
+            if section_data['section_name'] == 'Bridgamesh':
+                # Re-declare columns with actual usable width
+                md_col, subsection = st.columns([3, 1])
+                with subsection:
+
+                    img1_col, img2_col = st.columns(2)
+
+                    with img1_col:
+                        st.image(os.path.join('images', 'bigbridge_section1.png'), caption='Section 1')
+                    with img2_col:
+                        st.image(os.path.join('images', 'bigbridge_section2.png'), caption='Section 2 post Gilgamesh')
+
+            with md_col:
+                st.markdown(md_body)
 
     # Restore the body header sections...
     md_body = '## ' + section_data['section_name'] + '\n\n' + md_body
@@ -91,15 +106,12 @@ def go():
         # Class Resources #
         #-----------------#
         # BLUE MAGE
-        if 'Blue-Mage' in class_selection:
+        if 'Blue-Mage' in class_selection or debug:
             with st.expander('Blue Resources'):
                 blue_resources.go(True)
 
         # CHEMIST
-        if 'Chemist' in class_selection:
-            # We don't need to load this most of the time most likely,
-            # so only do it when the chemist option is actually selected.
-            from resources import mix_resources
+        if 'Chemist' in class_selection or debug:
             with st.expander('Chemist Resources'):
                 mix_resources.go()
 
