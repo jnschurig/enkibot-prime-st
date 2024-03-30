@@ -11,6 +11,7 @@ def get_raw_data():
 
 def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False, boss_row_df=None, boss_col_config_dict:dict=None):
     # Function to draw the section data.
+    section_name = section_data['section_name']
 
     new_section_list = json.loads(section_data['section_parts'])
 
@@ -18,12 +19,12 @@ def format_section(section_data, class_codes_list:list=None, expanded_setting:bo
 
     if not simplified_display:
         # Add world-specific section anchors.
-        if section_data['section_name'] in constants.SECTION_NAV_ANCHORS.keys():
-            anchor_text = constants.SECTION_NAV_ANCHORS[section_data['section_name']]
+        if section_name in constants.SECTION_NAV_ANCHORS.keys():
+            anchor_text = constants.SECTION_NAV_ANCHORS[section_name]
             st.info(f'#### {anchor_text}')
 
         # Draw Section
-        with st.expander(section_data['section_name'], expanded=expanded_setting):
+        with st.expander(section_name, expanded=expanded_setting):
             if boss_row_df is not None:
                 st.dataframe(
                     boss_row_df, 
@@ -34,31 +35,56 @@ def format_section(section_data, class_codes_list:list=None, expanded_setting:bo
                     # key='boss_detail_' + section_data['section_name']
                 )
 
-            # Create placeholder columns.
-            md_col, subsection = st.columns([100, 1])
-            if section_data['section_name'] == 'Bridgamesh':
-                # Re-declare columns with actual usable width
-                md_col, subsection = st.columns([3, 1])
-                with subsection:
+            st.markdown(md_body)
+
+            # Section Customizations
+            if section_name == 'Bridgamesh':
+                with st.popover('Big Bridge'):
 
                     img1_col, img2_col = st.columns(2)
 
                     with img1_col:
-                        st.image(os.path.join('images', 'bigbridge_section1.png'), caption='Section 1')
+                        st.caption('Section 1 - pre Gilgamesh')
+                        st.image(os.path.join('images', 'bigbridge_section1.png'))
                     with img2_col:
-                        st.image(os.path.join('images', 'bigbridge_section2.png'), caption='Section 2 post Gilgamesh')
+                        st.caption('Section 2 post Gilgamesh')
+                        st.image(os.path.join('images', 'bigbridge_section2.png'))
 
-            with md_col:
-                st.markdown(md_body)
+            if section_name == 'Neo Ex Cactuar':
+                with st.popover('Image Guide'):
+                    st.image('https://i.imgur.com/newtN7c.png')
+
 
     # Restore the body header sections...
-    md_body = '## ' + section_data['section_name'] + '\n\n' + md_body
+    md_body = '## ' + section_name + '\n\n' + md_body
     if simplified_display:
         st.markdown(md_body)
 
     return md_body
 
-def go():
+def set_job_query_params():
+    st.query_params.job = st.session_state.get('class_selection')
+
+def fetch_job_query_params() -> list:
+    jobs = st.query_params.get_all('job')
+    if type(jobs) is str:
+        return [jobs]
+    elif type(jobs) is list:
+        return jobs
+    elif jobs is None:
+        return []
+    else:
+        st.error(f'Um what, "job" query param evaluated as {str(type(jobs))} type')
+
+def sync_job_state():
+    class_selection = st.session_state.get('class_selection')
+    job_query_params = fetch_job_query_params()
+    if class_selection: set_job_query_params()
+    if job_query_params and not class_selection:
+        st.session_state['class_selection'] = job_query_params
+
+
+def main():
     #---------------#
     # Title Section #
     #---------------#
@@ -68,6 +94,9 @@ def go():
 
     with header_col2:
         st.image(os.path.join('images', 'enkidu_no_shadow.png'), width=64)
+
+    # url = f"[Share](?job={(st.query_params.get('job'))})"
+    # st.markdown(url)
 
     #---------#
     # Sidebar #
@@ -83,13 +112,30 @@ def go():
         with box_col2:
             expanded = st.checkbox('Expand All', value=False, help='Auto expand/collapse all sections')
 
+        class_options = [
+            *constants.UNKNOWN_OPTIONS,
+            *list(constants.CLASS_CODE_LOOKUP.keys())
+        ]
+
+        # st.session_state['class_selection'] = fetch_job_query_params()
+        # st.json(fetch_job_query_params())
+        # st.json(st.session_state.get('class_selection'))
+        # if fetch_job_query_params() and not st.session_state.get('class_selection'):
+        #     st.session_state['class_selection'] = fetch_job_query_params()
+
+        # st.json(fetch_job_query_params())
+        sync_job_state()
+
         with selection_container:
             class_selection = st.multiselect(
-                'Class Selection', 
-                constants.UNKNOWN_OPTIONS + list(constants.CLASS_CODE_LOOKUP.keys()),
+                label='Class Selection', 
+                options=class_options,
+                # default=fetch_job_query_params(),
                 help='',
                 disabled=debug,
                 label_visibility='collapsed',
+                key='class_selection',
+                # on_change=set_job_query_params(),
                 )
 
         search_value = st.text_input(
@@ -135,7 +181,7 @@ def go():
             with button_col2:
                 if st.button('Reset Session', help='This will reset the browser session state (Warning: Experimental!)'):
                     gen.reset_session()
-                    st.experimental_rerun()
+                    # st.experimental_rerun()
             
             show_original_md = st.checkbox('Simplified Display', value=False, help='Show the original markdown data instead of the expanders.')
 
@@ -151,7 +197,7 @@ def go():
         hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
 
     # Declare the page tabs
-    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_boss_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue', 'Bosses', 'Changelog'])
+    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_mix_tab, enki_boss_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue', '!Mix', 'Bosses', 'Changelog'])
 
     #--------#
     # Bosses #
@@ -214,6 +260,9 @@ def go():
     with enki_blue_tab:
         blue_resources.go(False)
 
+    with enki_mix_tab:
+        mix_resources.go(key='tab')
+
     #-----------#
     # Changelog #
     #-----------#
@@ -240,4 +289,4 @@ if __name__ == '__main__':
             or come to the Discord mentioned in the intro text.''',
         }
     )
-    go()
+    main()

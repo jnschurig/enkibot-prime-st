@@ -88,8 +88,12 @@ def class_match_sections(section_parts:list, class_list:list=None, return_as_lis
     return return_string
 
 def reset_session():
+    st.query_params.clear()
+
     for key in st.session_state.keys():
         del st.session_state[key]
+
+    st.rerun()
 
     return
 

@@ -1,10 +1,17 @@
-#### 1.0.0 2023-08-28
+#### 0.7.0 2024-03-23
 
 - Added extra usable sections in each expander.
 - Added Big Bridge encounter chart in the Bridgamesh section.
+- Added a popover image for the Neo Exdeath image reference.
 - Improved the code layout as relating to !Mix resources.
+- Added !Mix as a tab. Sidebar !Mix will remain available when Chemist class is selected.
 - Checking the Debug box will enable !Blue and !Mix resources.
 - Added more detail to the README.
+- Job query parameters enabled!
+  - Now a the selected jobs can be changed as part of a url.
+  - Link directly to the selected classes.
+- Improved data parsing (wip)
+- Query params for searches (maybe just the main one)
 
 #### 0.6.0 2023-08-04
 

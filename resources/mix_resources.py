@@ -35,7 +35,7 @@ def format_mix_entry(mix_row):
 
     return
 
-def go():
+def go(key:str = 'sidebar'):
     st.title('!Mix Library')
 
     # Fetch mix data.
@@ -47,7 +47,8 @@ def go():
         value='', 
         placeholder='Search Mix Recipes', 
         label_visibility='collapsed', 
-        help='Search mix recipes for key terms or values'
+        help='Search mix recipes for key terms or values',
+        key=f'mix_search_{key}',
     )
 
     if mixes_search_value:
@@ -57,21 +58,21 @@ def go():
     category_filters = []
     cat_col1, cat_col2 = st.columns(2)
     with cat_col1:
-        if st.checkbox('Healing', value=False):
+        if st.checkbox('Healing', value=False, key=f'is_healing_{key}',):
             category_filters.append('HEALING')
-        if st.checkbox('Support', value=False):
+        if st.checkbox('Support', value=False, key=f'is_support_{key}',):
             category_filters.append('SUPPORT')
     with cat_col2:
-        if st.checkbox('Status Ailment', value=False):
+        if st.checkbox('Status Ailment', value=False, key=f'is_status_{key}',):
             category_filters.append('STATUS AILMENT')
-        if st.checkbox('Offense', value=False):
+        if st.checkbox('Offense', value=False, key=f'is_offense_{key}',):
             category_filters.append('OFFENSE')
 
     if len(category_filters) > 0:
         mix_data = mix_data[mix_data['category'].isin(category_filters)]
 
     with cat_col1:
-        if st.checkbox('Sort by Favorite', help='Show particularly useful mixes first.'):
+        if st.checkbox('Sort by Favorite', help='Show particularly useful mixes first.', key=f'sort_by_fav_{key}',):
             mix_data = mix_data.sort_values(by=['category'])
             mix_data = mix_data.sort_values(by=['star'], ascending=False)
 
