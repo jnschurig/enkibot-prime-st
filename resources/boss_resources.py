@@ -16,7 +16,7 @@ def load_yaml_data(file_name:str=None):
     if file_name is None:
         yaml_file = os.path.join(data_dir, '_bosses.yml')
     else:
-        yaml_file = os.path.join(data_dir, file_name)
+        yaml_file = os.path.join(data_dir, f'{file_name}.yml')
 
     try:
         with open(yaml_file, 'r') as f:
@@ -53,7 +53,7 @@ def fetch_boss_data():
             # Return one row per boss part, so collect the inforation and later append to the list.
             try:
                 boss_row = {
-                    'section_name': boss_detail['Section'],
+                    'section_title': boss_detail['Section'],
                     'boss_number': idx+1,
                     'boss_name': boss_name,
                     'boss_level': boss[boss_name]['Level'],
@@ -105,7 +105,7 @@ def fetch_boss_data():
     all_boss_df = pd.DataFrame(all_boss_details).sort_values(by=['order_by', 'boss_number', 'boss_name'])
 
     col_config = {
-        'section_name': 'Hint Section',
+        'section_title': 'Hint Section',
         'boss_name': 'Boss Name',
         'boss_level': st.column_config.NumberColumn('Level', help="Boss level"),
         'boss_hp': st.column_config.NumberColumn('HP', help="Boss effective hit points"),
