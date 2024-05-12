@@ -29,27 +29,27 @@ spells:
   - roulette.yml
   - mighty_guard.yml
   - mind_blast.yml
-sources: 
+sources:
   Blue Magic: "https://www.rpgsite.net/feature/11955-final-fantasy-v-blue-magic-how-to-learn-every-spell-for-the-blue-mage"
   Bestiary: "https://finalfantasy.fandom.com/wiki/Bestiary_(Final_Fantasy_V)"
 Notes:
-- Learning: >
-    To learn any !Blue magic, the spell must successfully land against the learner. 
-    If the effects of the spell are blocked, dodged, reflected, or it misses, it 
-    will not be learned. After the spell hits the learner, the party must WIN the 
-    battle. If the battle ends in party wipeout or escape, the spell is not learned. 
-    A blue spell only need be learned by one character to be used by the entire party.    
-    All blue mages inherently have Learn, even if it isn't explicitly equipped as an 
-    ability. Other classes require having Learn set as an ability to be able to learn 
-    !Blue skills. 
-- Advanced: >
-    Some monsters can only teach their blue spell through the use of **!Control** from 
-    the Beastmaster class. Others still may ALSO require that a monster have Reflect cast 
-    on them so that the non-targetable spell can be reflected off a monster and land 
-    on a learner. Yet other monsters may only use their !Blue spell when under the 
+  Learning: |
+    To learn any !Blue magic, a monster or enemy must use the spell and it must
+    successfully land against the learner. If the effects of the spell are blocked,
+    dodged, reflected, or it misses, the spell will *not* be learned. After the spell
+    hits the learner, the party must WIN the battle. If the battle ends in party wipeout
+    or escape, the spell is not learned. A blue spell only need be learned by one
+    character to be usable to the entire party. All characters whose job is set to Blue
+    Mage inherently have *Learn*, even if it isn't explicitly equipped as an ability.
+    Other jobs require having *Learn* set as an ability to be able to learn !Blue skills. 
+  Advanced: |
+    Some monsters can only teach their blue spell through the use of **!Control** from
+    the Beastmaster class. Others still may ALSO require that a monster have Reflect cast
+    on them so that the non-targetable spell can be reflected off a monster and land
+    on a learner. Yet other monsters may only use their !Blue spell when under the
     influence of Confuse.
-- Level "n" Spell: >
-    The learner must have a level which is a multiple of n and be affected by the spell. 
-    In the case of Level 5 Death, the learner must have a level which is a multiple of 5, 
-    AND they must die to learn the spell. Be careful not to have all party members at the 
-    same level when attempting to learn this skill. 
+  Level "n" Spell: |
+    The learner must have a level which is a multiple of n and be affected by the spell.
+    In the case of Level 5 Death, the learner must have a level which is a multiple of 5,
+    AND they must die to learn the spell. Be careful not to have all party members at the
+    same level when attempting to learn this skill.

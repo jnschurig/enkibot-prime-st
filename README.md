@@ -20,6 +20,7 @@ Feel free to visit the public web version of [Enkibot Prime ST](https://enkibot-
 ### Shared with Enkibot Prime
 
 * Generalized and class-specific hints
+* Debug option for viewing all class hints
 
 ### Unique Features
 
@@ -27,9 +28,7 @@ Feel free to visit the public web version of [Enkibot Prime ST](https://enkibot-
 * !Blue magic spellbook and aquisition
 * Chemist !Mix resources
 * Multi-class selection and live updates to the hint content
-* Debug option for viewing all class hints
 * Raw output with copy option and save-to-file button
-* Search option for filtering content
 
 ## Sources
 

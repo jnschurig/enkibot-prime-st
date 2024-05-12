@@ -1,17 +1,26 @@
-#### 0.7.0 2024-03-23
+#### 1.0.0 2024-04-30
 
 - Added extra usable sections in each expander.
-- Added Big Bridge encounter chart in the Bridgamesh section.
+- Added a popover for Big Bridge encounter chart in the Bridgamesh section.
 - Added a popover image for the Neo Exdeath image reference.
 - Improved the code layout as relating to !Mix resources.
 - Added !Mix as a tab. Sidebar !Mix will remain available when Chemist class is selected.
 - Checking the Debug box will enable !Blue and !Mix resources.
+- Checking the Debug box will enable the NOT job class hints.
+- Fixed a significant bug in which `Shield`, `Rod`, and other such job
+  tags were not being used, so relevant hints were either always on or
+  never on.
 - Added more detail to the README.
 - Job query parameters enabled!
-  - Now a the selected jobs can be changed as part of a url.
+  - Now the selected jobs can be changed as part of a url using `job=job-name`.
   - Link directly to the selected classes.
-- Improved data parsing (wip)
-- Query params for searches (maybe just the main one)
+- Improved data parser fetches hint data from source repository.
+- Added multiple output formats for raw data.
+<!-- - Replaced boss_resources and incorporated it into the Enkibot class. -->
+<!-- - Replaced blue_resources and incorporated it into the Enkibot class. -->
+- todo: fix the search
+- Added "UNKNOWN ADVANCE" option to job list to show all advance job hints.
+<!-- - Query params for searches (maybe just the main one) -->
 
 #### 0.6.0 2023-08-04
 
