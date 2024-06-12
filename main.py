@@ -1,5 +1,4 @@
 import streamlit as st
-# import pandas as pd
 import os
 import random
 from enkibot_db import Enkibot, dump_modes, class_codes, unknown_options
