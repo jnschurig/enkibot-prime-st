@@ -1,4 +1,4 @@
-#### 1.0.0 2024-04-30
+#### 1.0.0 2024-06-12
 
 - Added extra usable sections in each expander.
 - Added a popover for Big Bridge encounter chart in the Bridgamesh section.
@@ -16,11 +16,9 @@
   - Link directly to the selected classes.
 - Improved data parser fetches hint data from source repository.
 - Added multiple output formats for raw data.
-<!-- - Replaced boss_resources and incorporated it into the Enkibot class. -->
-<!-- - Replaced blue_resources and incorporated it into the Enkibot class. -->
-- todo: fix the search
 - Added "UNKNOWN ADVANCE" option to job list to show all advance job hints.
-<!-- - Query params for searches (maybe just the main one) -->
+- Added experimental hint display options.
+- Added text-only, non-emoji option for hints.
 
 #### 0.6.0 2023-08-04
 
