@@ -1,0 +1,432 @@
+- category: HEALING
+  recipe_name_snes: X-Potion
+  recipe_name_gba: X-Potion
+  combo_1: Ether + Potion
+  combo_2: Ether + Turtle Shell
+  effect: Heals all HP
+  tags: ['full']
+  favorite: False
+
+- category: HEALING
+  recipe_name_snes: Neutralize
+  recipe_name_gba: Neutralizer
+  combo_1: Antidote + Potion
+  combo_2: Antidote + Hi-Potion
+  effect: Heals some HP and cures Poison status
+  tags: ['hit', 'points', 'heal']
+  favorite: False
+
+- category: HEALING
+  recipe_name_snes: Kiss of Life
+  recipe_name_gba: Kiss of Life
+  combo_1: Phoenix Down + Maiden's Kiss
+  combo_2: 
+  effect: Revives one knocked out party member with half HP and full MP
+  tags: ['life']
+  favorite: False
+
+- category: HEALING
+  recipe_name_snes: Reincarnation
+  recipe_name_gba: Reincarnate
+  combo_1: Phoenix Down + Ether
+  combo_2: Phoenix Down + Elixir
+  effect: Revives one knocked out party member with full HP and MP
+  tags: ['life', 'full']
+  favorite: False
+
+- category: HEALING
+  recipe_name_snes: Resurrection
+  recipe_name_gba: Resurrection
+  combo_1: Phoenix Down + Potion
+  combo_2: Phoenix Down + Hi-Potion
+  effect: Revives one knocked out party member with full HP and MP
+  tags: ['life', 'full']
+  favorite: True
+
+- category: HEALING
+  recipe_name_snes: Ether Dry
+  recipe_name_gba: Triple Ether
+  combo_1: Hi-Potion + Turtle Shell
+  combo_2: 
+  effect: Restore MP with triple the power of normal Ether
+  tags: ['magic', 'points']
+  favorite: False
+
+- category: HEALING
+  recipe_name_snes: Half Elixir
+  recipe_name_gba: Balm of Gilead
+  combo_1: Hi-Potion + Ether
+  combo_2: 
+  effect: Heals all MP
+  tags: ['magic', 'points', 'full']
+  favorite: False
+
+- category: HEALING
+  recipe_name_snes: Panacea
+  recipe_name_gba: Remedy
+  combo_1: Phoenix Down + Turtle Shell
+  combo_2: 
+  effect: Cures all negative status ailments
+  tags: ['old', 'darkness', 'zombie', 'poison', 'mini', 'toad', 'petrify', 'silence', 'berserk', 'confuse', 'paralyze', 'paralysis', 'sleep', 'slow', 'stop', 'sap', 'doom', 'float', 'all']
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Failure
+  recipe_name_gba: Dud Potion
+  combo_1: Turtle Shell + Elixir
+  combo_2: Turtle Shell + Dragon Fang
+  effect: Causes Sap and Confusion to party
+  tags: []
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Dragon's Kiss
+  recipe_name_gba: Dragon Kiss
+  combo_1: Maiden's Kiss + Dragon Fang
+  combo_2: 
+  effect: Gives a target "Dragon" and "Heavy" type, making him/her impervious to most status effects but weak to weapons that are strong against Dragons
+  tags: ['heavy', 'dragon']
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Water of Life
+  recipe_name_gba: Lifewater
+  combo_1: Potion + Hi-Potion
+  combo_2: 
+  effect: Casts Regen
+  tags: ['hot', 'time', 'regenerate']
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Cure Blind
+  recipe_name_gba: Cure Blindness
+  combo_1: Eyedrop + Potion
+  combo_2: Eyedrop + Hi-Potion
+  effect: Heals some HP and cures Darkness status
+  tags: []
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Samson Power
+  recipe_name_gba: Samson's Might
+  combo_1: Holy Water + Antidote
+  combo_2: 
+  effect: Raises a character level by 10
+  tags: ['lvl']
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Dragon Power
+  recipe_name_gba: Dragon Power
+  combo_1: Dragon Fang + Potion
+  combo_2: Dragon Fang + Hi-Potion
+  effect: Raises a character level by 20
+  tags: ['lvl']
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Resist Poison
+  recipe_name_gba: Resist Poison
+  combo_1: Ether + Antidote
+  combo_2: 
+  effect: Makes target immune to Poison status.
+  tags: ['elemental']
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Resist Fire
+  recipe_name_gba: Resist Fire
+  combo_1: Ether + Eyedrop
+  combo_2: 
+  effect: Makes target absorb Fire damage
+  tags: ['elemental']
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Resist Ice
+  recipe_name_gba: Resist Ice
+  combo_1: Phoenix Down + Antidote
+  combo_2: 
+  effect: Makes target absorb Ice damage
+  tags: ['elemental']
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Resist Lightning
+  recipe_name_gba: Resist Lightning
+  combo_1: Phoenix Down + Eyedrop
+  combo_2: 
+  effect: Makes target absorb Lightning damage
+  tags: ['elemental']
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Dragon Shield
+  recipe_name_gba: Dragon Shielding
+  combo_1: Ether + Dragon Fang
+  combo_2: 
+  effect: Makes target immune to Fire, Ice and Lightning damage
+  tags: ['elemental']
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Dragon Armor
+  recipe_name_gba: Dragon Defense
+  combo_1: Phoenix Down + Dragon Fang
+  combo_2: 
+  effect: Grants Protect, Shell, Reflect and Regen
+  tags: []
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Life Shield
+  recipe_name_gba: Lifeshield
+  combo_1: Phoenix Down + Holy Water
+  combo_2: 
+  effect: Makes target immune to instant death attacks
+  tags: []
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Kiss of Blessing
+  recipe_name_gba: Blessed Kiss
+  combo_1: Maiden's Kiss + Holy Water
+  combo_2: 
+  effect: Grants Berserk, Haste, and Blink status
+  tags: []
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Levitate
+  recipe_name_gba: Levisalve
+  combo_1: Antidote + Maiden's Kiss
+  combo_2: 
+  effect: Grants Float status
+  tags: []
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Bacchus' Wine
+  recipe_name_gba: Bacchus's Cider
+  combo_1: Holy Water + Turtle Shell
+  combo_2: 
+  effect: Grants Berserk status
+  tags: []
+  favorite: False
+
+- category: SUPPORT
+  recipe_name_snes: Elemental Power
+  recipe_name_gba: Elemental Power
+  combo_1: Holy Water + Eyedrop
+  combo_2: 
+  effect: Increases all elemental spell damage by 50%. This is the only way to boost Water spell damage.
+  tags: []
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Protect Drink
+  recipe_name_gba: Protect Potion
+  combo_1: Turtle Shell + Turtle Shell
+  combo_2: 
+  effect: Grants Protect and Shell status
+  tags: []
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Haste Drink
+  recipe_name_gba: Hasty-ade
+  combo_1: Turtle Shell + Eyedrop
+  combo_2: 
+  effect: Grants Haste status
+  tags: []
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Giant Drink
+  recipe_name_gba: Goliath Tonic
+  combo_1: Elixir + Dragon Fang
+  combo_2: 
+  effect: Doubles maximum HP
+  tags: ['hit', 'points']
+  favorite: True
+
+- category: SUPPORT
+  recipe_name_snes: Restorative
+  recipe_name_gba: Smelling Salts
+  combo_1: Antidote + Eyedrop
+  combo_2: 
+  effect: Cures Aging, Sleep, Paralysis, Confuse, Berserk, and Silence.
+  tags: []
+  favorite: True
+
+- category: STATUS
+  recipe_name_snes: Lilith's Kiss
+  recipe_name_gba: Lilith's Kiss
+  combo_1: Maiden's Kiss + Ether
+  combo_2: Maiden's Kiss + Elixir
+  effect: Drain MP from enemy. Spell power 45.
+  tags: ['magic', 'points']
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Dark Ether
+  recipe_name_gba: Dark Ether
+  combo_1: Ether + Dark Matter
+  combo_2: 
+  effect: Reduces enemy's MP to 1/4
+  tags: ['magic', 'points']
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Lamia's Kiss
+  recipe_name_gba: Lamia Kiss
+  combo_1: Maiden's Kiss + Eyedrop
+  combo_2: 
+  effect: Confuses target
+  tags: []
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Toad's Kiss
+  recipe_name_gba: Toad Kiss
+  combo_1: Maiden's Kiss + Dark Matter
+  combo_2: 
+  effect: Causes Toad status
+  tags: []
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Split Shell
+  recipe_name_gba: Turtle Soup
+  combo_1: Turtle Shell + Antidote
+  combo_2: 
+  effect: Decreases Defense and Magic Defense by half
+  tags: []
+  favorite: True
+
+- category: STATUS
+  recipe_name_snes: Dark Gas
+  recipe_name_gba: Dark Gas
+  combo_1: Eyedrop + Dark Matter
+  combo_2: 
+  effect: Causes Darkness to target
+  tags: []
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Dark Sigh
+  recipe_name_gba: Dark Sigh
+  combo_1: Eyedrop + Dragon Fang
+  combo_2: 
+  effect: Causes Darkness, Confuse and Sap to target
+  tags: []
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Dark Potion
+  recipe_name_gba: Devil's Juice
+  combo_1: Dark Matter + Potion
+  combo_2: Dark Matter + Hi-Potion
+  effect: Deal 666 damage
+  tags: ['nuke']
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Dark Elixir
+  recipe_name_gba: Antilixir
+  combo_1: Elixir + Dark Matter
+  combo_2: 
+  effect: Drains enemy's HP to single digits
+  tags: ['hit', 'points', 'weak']
+  favorite: False
+
+- category: STATUS
+  recipe_name_snes: Death Potion
+  recipe_name_gba: Death Potion
+  combo_1: Phoenix Down + Dark Matter
+  combo_2: 
+  effect: Instant Death to enemy. Does not bypass Death immunity, but kills Heavy enemies. Fully heals the undead.
+  tags: []
+  favorite: True
+
+- category: OFFENSE
+  recipe_name_snes: Drain Kiss
+  recipe_name_gba: Succubus Kiss
+  combo_1: Maiden's Kiss + Turtle Shell
+  combo_2: 
+  effect: Drain HP from enemy. Spell power 255.
+  tags: ['hit', 'points', 'nuke']
+  favorite: True
+
+- category: OFFENSE
+  recipe_name_snes: Holy Breath
+  recipe_name_gba: Holy Breath
+  combo_1: Holy Water + Dragon Fang
+  combo_2: 
+  effect: Deals Holy damage equal to caster's current HP.
+  tags: ['hit', 'points']
+  favorite: False
+
+- category: OFFENSE
+  recipe_name_snes: Failure
+  recipe_name_gba: Dud Potion
+  combo_1: Holy Water + Dark Matter
+  combo_2: 
+  effect: Poisons target
+  tags: []
+  favorite: False
+
+- category: OFFENSE
+  recipe_name_snes: Explosive
+  recipe_name_gba: TNT
+  combo_1: Turtle Shell + Dark Matter
+  combo_2: 
+  effect: Deals damage equal to caster's current HP, kills caster
+  tags: ['hit', 'points']
+  favorite: False
+
+- category: OFFENSE
+  recipe_name_snes: Poison
+  recipe_name_gba: Poison
+  combo_1: Antidote + Dark Matter
+  combo_2: 
+  effect: Poisons target
+  tags: []
+  favorite: False
+
+- category: OFFENSE
+  recipe_name_snes: Poison Breath
+  recipe_name_gba: Poison Breath
+  combo_1: Antidote + Dragon Fang
+  combo_2: 
+  effect: Deals Poison damage equal to half of caster's current HP.
+  tags: ['hit', 'points']
+  favorite: False
+
+- category: OFFENSE
+  recipe_name_snes: Dragon Breath
+  recipe_name_gba: Dragon Breath
+  combo_1: Dragon Fang + Dragon Fang
+  combo_2: 
+  effect: Deals Fire, Ice and Lightning damage equal to caster's current HP.
+  tags: ['hit', 'points', 'elemental']
+  favorite: False
+
+- category: OFFENSE
+  recipe_name_snes: Dark Breath
+  recipe_name_gba: Dark Breath
+  combo_1: Dragon Fang + Dark Matter
+  combo_2: 
+  effect: Deals damage equal to caster's max HP - current HP
+  tags: ['hit', 'points']
+  favorite: False
+
+- category: OFFENSE
+  recipe_name_snes: Shadow Flare
+  recipe_name_gba: Shadowflare
+  combo_1: Dark Matter + Dark Matter
+  combo_2: 
+  effect: Spell power 240. Ignores 97% of target's Magic Defense. Causes Sap.
+  tags: ['hit', 'points', 'nuke']
+  favorite: True
+

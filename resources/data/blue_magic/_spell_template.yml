@@ -1,14 +1,14 @@
 Name of Spell:
-  Display Name: "????" # In case the display name does not place nice with data formats.
+  Display Name: "????" # In case the display name does not play nice with data formats or key names.
   Alternate Name: "SNES Name"
   MP Cost: 0
   Learned From:
   - Monster name
   - Another Monster
-  - Even this monster
+  - Even this monster:
     Required: "!Ability" # In case this blue spell cannot be easily learned from this monster.
-  - Yet Another
-    Required: # In case there are multiple requirements for one monster, such as confuse + reflect.
+  - Yet Another:
+    # In case there are multiple requirements for one monster, such as confuse + reflect.
     - "!Ability"
     - "Spell"
     - "Status"
@@ -18,12 +18,12 @@ Name of Spell:
   - Monster name: Location
   - Another Monster: Location
   Description: >
-    A short, yet descriptive passage about the spell. 
+    A short, yet descriptive passage about the spell.
     What it does, what type of damage, etc.
   Warning: >
     Possible warning text, such as level requirement or risks.
   Note: >
-    Additional detail, possibly related to how to learn spell 
+    Additional detail, possibly related to how to learn spell
     from a recommended monster.
   FJF Recommended: Yes 
   # Yes or No preferred here. Many blue spells 

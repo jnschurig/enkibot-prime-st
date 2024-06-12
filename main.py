@@ -1,49 +1,105 @@
 import streamlit as st
-import pandas as pd
-import os, json, random
-import constants, general as gen, parse_hint_db as ph
-from resources import blue_resources, boss_resources
+# import pandas as pd
+import os
+import random
+from enkibot_db import Enkibot, dump_modes, class_codes, unknown_options
+from enkibot_draw import EnkiDraw
+
+from typing import List
+
+ABOUT_TEXT = '''
+A [Four Job Fiesta](https://www.fourjobfiesta.com/) hint generator.
+
+Hint data was helpfully provided from [Enkibot Prime](https://enkibot-prime.herokuapp.com/), and
+credit goes to the original creators.
+
+This version was made using Python and Streamlit and has additional content and functionality over
+the original. Additions include boss info, !Blue, and !Mix sections. Check out the
+[Github Repo](https://github.com/jnschurig/enkibot-prime-st).
+'''
+
+PAGE_ICONS = [
+    '⚔️',
+    '🗡️',
+    '🛡️',
+    '🔪',
+    '🏹',
+    '🎀',
+    '🪄',
+    '🔔',
+    '🎶',
+    '⛺',
+    '⚗️',
+    '🔨',
+    '🪓',
+    '💃',
+    '🕺',
+    # '⏱️',
+    '⏳',
+    # '📖',
+    # '🤜🏽',
+    # '📜',
+    # '🧪',
+    '❄️',
+    '🔥',
+    '⚡',
+    '💧',
+    # '🍃',
+    # '⛰️',
+    # '🫧',
+    # '✨',
+    # '🌈',
+    '🧟',
+    '🐲',
+    '🦄',
+    '🐸',
+    '💀',
+    '🕶️',
+]
 
 @st.cache_data
-def get_raw_data():
-    # The dataframe is cached to improve performance.
-    return pd.DataFrame(ph.easy_df_parse())
+def get_hint_dump(_enkibot: Enkibot, jobs: List, format: str, indent: int = None) -> str:
+    f"""
+    Fetch hint data as a large string, formatted in varying styles.
 
-def format_section(section_data, class_codes_list:list=None, expanded_setting:bool=False, debug:bool=False, simplified_display:bool=False, boss_row_df=None, boss_col_config_dict:dict=None):
-    # Function to draw the section data.
+    Args:
+        _enkibot (Enkibot): An enkibot object.
+        jobs (List): The list of jobs for the hints. This arg is not used functionally, but aids in caching.
+        format (str): The output format of the hint string. Valid options: {", ".join(dump_modes)}
+        indent (int): The number of spaces to use for hint indentation. Markdown and text have default
+                      of 0, yaml formats have a default of 2, and json has a default of 4.
 
-    new_section_list = json.loads(section_data['section_parts'])
+    Returns:
+        str: A large string containing compiled hint data.
+    """
+    return _enkibot.dumps(format=format, indent=indent)
 
-    md_body = gen.class_match_sections(new_section_list, class_codes_list, debug=debug)
+def initialize_session_state():
+    """
+    Sets the session state at the beginning of each application loop.
+    This will utilize query parameters and session state.
+    """
+    if st.session_state.get('experimental_display') is None:
+        display_param = True if st.query_params.get('experimental_display', 'false').lower() == 'true' else False
+        st.session_state['experimental_display'] = display_param
+    
+    if st.session_state.get('debug') is None:
+        debug_param = True if st.query_params.get('debug', 'false').lower() == 'true' else False
+        st.session_state['debug'] = debug_param
+        
+    if st.session_state.get('class_selection') is None:
+        # Initialize with a unique list
+        st.session_state['class_selection'] = list(set(st.query_params.get_all('job')))
+        
+    return
 
-    if not simplified_display:
-        # Add world-specific section anchors.
-        if section_data['section_name'] in constants.SECTION_NAV_ANCHORS.keys():
-            anchor_text = constants.SECTION_NAV_ANCHORS[section_data['section_name']]
-            st.info(f'#### {anchor_text}')
+def main():
+    """
+    The main function. This will run from top to bottom for every action that can
+    change the app content.
+    """
+    initialize_session_state()
 
-        # Draw Section
-        with st.expander(section_data['section_name'], expanded=expanded_setting):
-            if boss_row_df is not None:
-                st.dataframe(
-                    boss_row_df, 
-                    column_config=boss_col_config_dict, 
-                    # disabled=True, 
-                    hide_index=True,
-                    use_container_width=True,
-                    # key='boss_detail_' + section_data['section_name']
-                )
-
-            st.markdown(md_body)
-
-    # Restore the body header sections...
-    md_body = '## ' + section_data['section_name'] + '\n\n' + md_body
-    if simplified_display:
-        st.markdown(md_body)
-
-    return md_body
-
-def go():
     #---------------#
     # Title Section #
     #---------------#
@@ -53,6 +109,9 @@ def go():
 
     with header_col2:
         st.image(os.path.join('images', 'enkidu_no_shadow.png'), width=64)
+
+    # url = f"[Share](?job={(st.query_params.get('job'))})"
+    # st.markdown(url)
 
     #---------#
     # Sidebar #
@@ -64,26 +123,33 @@ def go():
 
         box_col1, box_col2 = st.columns(2)
         with box_col1:
-            debug = st.checkbox('Debug', value=False, help='See debug data for all classes')
+            debug = st.checkbox(
+                'Debug',
+                value=st.session_state['debug'],
+                help='See hint data for _**all**_ classes',
+                key='debug',
+            )
+            
         with box_col2:
-            expanded = st.checkbox('Expand All', value=False, help='Auto expand/collapse all sections')
+            expanded = st.checkbox('Expand All', value=True, help='Auto expand/collapse all sections')
+
+        class_options = [
+            *unknown_options,
+            *list(class_codes.keys())
+        ]
 
         with selection_container:
             class_selection = st.multiselect(
-                'Class Selection', 
-                constants.UNKNOWN_OPTIONS + list(constants.CLASS_CODE_LOOKUP.keys()),
+                label='Class Selection', 
+                options=class_options,
+                default=st.session_state.get('class_selection', []),
                 help='',
                 disabled=debug,
                 label_visibility='collapsed',
+                key='class_selection',
                 )
-
-        search_value = st.text_input(
-            'Search', 
-            value='', 
-            placeholder='Search Hint Data', 
-            label_visibility='collapsed', 
-            help='Search database for key terms or values'
-        )
+            
+            st.query_params['job'] = [*class_selection]
 
         st.divider()
 
@@ -91,116 +157,115 @@ def go():
         # Class Resources #
         #-----------------#
         # BLUE MAGE
-        if 'Blue-Mage' in class_selection:
-            with st.expander('Blue Resources'):
-                blue_resources.go(True)
+        blue_sidebar_container = st.container()
 
         # CHEMIST
-        if 'Chemist' in class_selection:
-            # We don't need to load this most of the time most likely,
-            # so only do it when the chemist option is actually selected.
-            from resources import mix_resources
-            with st.expander('Chemist Resources'):
-                mix_resources.go()
+        chemist_sidebar_container = st.container()
 
-        with st.expander('About', expanded=True):
-            st.markdown(constants.ABOUT_TEXT)
+        with st.expander('About', expanded=False):
+            st.markdown(ABOUT_TEXT)
 
         #--------------------#
         # Additional Options #
         #--------------------#
         with st.expander('Additional Options', expanded=False):
-            # An optional checkbox to set debug functionality for the app.
-            # debug_functionality = st.checkbox('Enable Debug Functionality', value=False, help='Enable debug levels of output')
+            # Reload the hint database
+            if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
+                st.cache_data.clear()
 
-            button_col1, button_col2 = st.columns(2)
-
-            with button_col1:
-                # Reload the hint database
-                if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
-                    st.cache_data.clear()
-
-            with button_col2:
-                if st.button('Reset Session', help='This will reset the browser session state (Warning: Experimental!)'):
-                    gen.reset_session()
-                    st.experimental_rerun()
+            use_boss_emoji = st.toggle('Use Icons', value=True, help='Enabled = Show emoji or pictures for icons in hint data where available. Disabled = show text only.')
+            display_style = 'emoji' if use_boss_emoji else 'text'
             
-            show_original_md = st.checkbox('Simplified Display', value=False, help='Show the original markdown data instead of the expanders.')
+            use_experimental_hints = st.toggle(
+                label='Experimental Hint Display',
+                value=st.session_state['experimental_display'],
+                help='Enkibot hints will be displayed using experimental rendering options.',
+            )
+            hint_draw_mode = 'advanced' if use_experimental_hints else 'standard'
 
-    # Get the codes (KNT, MNK, etc)
-    class_codes = gen.get_codes_from_selection(class_selection)
-
-    with st.spinner('Fetching Data...'):
-        # Added another functional layer so as to include caching.
-        hint_data = get_raw_data()
-
-    # If a search value is set, filter the entire database on the search result.
-    if search_value:
-        hint_data = hint_data[hint_data.apply(lambda row: row.astype(str).str.contains(search_value, case=False).any(), axis=1)]
+    # Initialize Enkibot
+    bot = EnkiDraw(
+        jobs=class_selection,
+        debug=debug,
+        display_style=display_style,
+    )
+    
+    # Add Blue sidebar option
+    if 'Blue-Mage' in class_selection or debug:
+        with blue_sidebar_container.expander('Blue Resources'):
+            bot.render_all_blue(columns=1, key='sidebar')
+    
+    # Add Chemist sidebar option
+    if 'Chemist' in class_selection or debug:
+        with chemist_sidebar_container.expander('Chemist Resources'):
+            bot.render_all_mixes(columns=1, key='sidebar')
 
     # Declare the page tabs
-    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_boss_tab, enki_changelog_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue', 'Bosses', 'Changelog'])
+    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_mix_tab, enki_boss_tab, enki_changelog_tab = st.tabs(
+        [
+            'Enkibot',
+            'Raw Output',
+            '!Blue',
+            '!Mix',
+            'Bosses',
+            'Changelog',
+        ]
+    )
 
     #--------#
     # Bosses #
     #--------#
     with enki_boss_tab:
-        boss_detail, boss_col_config = boss_resources.go()
-        sectional_col_list = list(boss_col_config.keys())#.remove('section_name')
-        sectional_col_list.remove('section_name')
+        bot.render_all_bosses()
 
     #-------------------#
     # MAIN HINT SECTION #
     #-------------------#
     with enki_main_tab:
-        if show_original_md:
-            st.markdown('[World 1](#post-wind-shrine) | [World 2](#world-2-intro) | [World 3](#antlion)')
-        else:
-            st.markdown('[World 1](#world-1) | [World 2](#world-2) | [World 3](#world-3)')
-
-        # Draw the sections
-        full_body = ''
-        for idx, section_row in hint_data.iterrows():
-            boss_row = boss_detail[boss_detail['section_name'] == section_row['section_name']][sectional_col_list]
-            # boss_row = boss_row[sectional_col_list]
-            
-            if len(boss_row.index) == 0:
-                boss_row = None
-
-            full_body += format_section(
-                section_data=section_row, 
-                class_codes_list=class_codes, 
-                expanded_setting=expanded, 
-                debug=debug, 
-                simplified_display=show_original_md, 
-                boss_row_df=boss_row,
-                boss_col_config_dict=boss_col_config
-            ) + '\n'
+        bot.render_hints(
+            draw_mode=hint_draw_mode,
+            expanded=expanded,
+        )
 
     #------------#
     # Raw Output #
     #------------#
     with enki_raw_output_tab:
-        if len(class_codes) > 0:
-            file_classes = gen.format_class_list_as_str(class_codes, '_')
-        elif debug:
-            file_classes = 'all'
-        else:
-            file_classes = 'no_classes'
+        download_col, selector_col = st.columns([1, 1])
+        
+        with selector_col:
+            output_format = st.selectbox(
+                'Format',
+                options=[n for n in dump_modes if n not in ['markdown', 'yml']],
+                label_visibility='collapsed',
+            )
+        
+        text_body = get_hint_dump(bot, jobs=bot.jobs, format=output_format)
+        
+        jobs_descriptor = 'all' if debug else "_".join(bot.jobs)
 
-        st.download_button(
-            'Export to File', 
-            data=full_body, 
-            file_name=f'enkibot_hints_{file_classes}.md', 
-            help='Download raw text to file.'
-        )
-        st.code(full_body, language='markdown')
+        with download_col:
+            st.download_button(
+                'Export to File', 
+                data=text_body, 
+                file_name=f'enkibot_hints_{jobs_descriptor}.{output_format}', 
+                help='Download raw text to file.',
+            )
+            
+        st.code(text_body, language=output_format)
 
     #---------------#
     # Blue Grimoire #
     #---------------#
     with enki_blue_tab:
-        blue_resources.go(False)
+        bot.render_all_blue(columns=3)
+
+    #-------------#
+    # Mix Library #
+    #-------------#
+    with enki_mix_tab:
+        # mix_resources.go(key='tab')
+        bot.render_all_mixes(columns=3, key='main')
 
     #-----------#
     # Changelog #
@@ -220,7 +285,7 @@ def go():
 if __name__ == '__main__':
     st.set_page_config(
         page_title='Enkibot Prime ST',
-        page_icon=random.choice(constants.PAGE_ICONS),
+        page_icon=random.choice(PAGE_ICONS),
         layout='wide',
         menu_items={
             "About": '''Check out the [Github Repo](https://github.com/jnschurig/enkibot-prime-st). 
@@ -228,4 +293,4 @@ if __name__ == '__main__':
             or come to the Discord mentioned in the intro text.''',
         }
     )
-    go()
+    main()

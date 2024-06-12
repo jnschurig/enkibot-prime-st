@@ -1,3 +1,25 @@
+#### 1.0.0 2024-06-12
+
+- Added extra usable sections in each expander.
+- Added a popover for Big Bridge encounter chart in the Bridgamesh section.
+- Added a popover image for the Neo Exdeath image reference.
+- Improved the code layout as relating to !Mix resources.
+- Added !Mix as a tab. Sidebar !Mix will remain available when Chemist class is selected.
+- Checking the Debug box will enable !Blue and !Mix resources.
+- Checking the Debug box will enable the NOT job class hints.
+- Fixed a significant bug in which `Shield`, `Rod`, and other such job
+  tags were not being used, so relevant hints were either always on or
+  never on.
+- Added more detail to the README.
+- Job query parameters enabled!
+  - Now the selected jobs can be changed as part of a url using `job=job-name`.
+  - Link directly to the selected classes.
+- Improved data parser fetches hint data from source repository.
+- Added multiple output formats for raw data.
+- Added "UNKNOWN ADVANCE" option to job list to show all advance job hints.
+- Added experimental hint display options.
+- Added text-only, non-emoji option for hints.
+
 #### 0.6.0 2023-08-04
 
 - Renamed the `Boss Compendium` tab to `Bosses` in order to reduce tab crowding.
