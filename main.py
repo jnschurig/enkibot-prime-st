@@ -169,9 +169,6 @@ def main():
         # Additional Options #
         #--------------------#
         with st.expander('Additional Options', expanded=False):
-            # button_col1, button_col2 = st.columns(2)
-
-            # with button_col1:
             # Reload the hint database
             if st.button('Clear Cache', help='The hint database is normally chached for quick use. Clear the cache and reload.'):
                 st.cache_data.clear()
@@ -204,7 +201,16 @@ def main():
             bot.render_all_mixes(columns=1, key='sidebar')
 
     # Declare the page tabs
-    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_mix_tab, enki_boss_tab, enki_changelog_tab, temp_tab = st.tabs(['Enkibot', 'Raw Output', '!Blue', '!Mix', 'Bosses', 'Changelog', 'temp'])
+    enki_main_tab, enki_raw_output_tab, enki_blue_tab, enki_mix_tab, enki_boss_tab, enki_changelog_tab = st.tabs(
+        [
+            'Enkibot',
+            'Raw Output',
+            '!Blue',
+            '!Mix',
+            'Bosses',
+            'Changelog',
+        ]
+    )
 
     #--------#
     # Bosses #
@@ -271,20 +277,6 @@ def main():
             changelog_text = f.read()
         st.markdown(changelog_text)
 
-    with temp_tab:
-        # from temp import test_languages
-        # test_languages()
-        # Use this to test large dedicated tab formatting
-        # bot.render_all_mixes(columns=3, key='main_test')
-        # for mix in bot.mix_detail:
-        #     st.write(mix.name)
-        #     st.write(mix.__dict__)
-        pass
-
-    with st.sidebar:
-        # Use this to test sidebar formatting
-        # bot.render_all_mixes(columns=1, key='sidebar_test')
-        pass
     # Footer URL to go back to the top.
     st.markdown('[Top](#enkibot-prime-st)')
 
